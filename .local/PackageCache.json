@@ -2,6 +2,16 @@
   "Packages": [
     {
       "Package": {
+        "Id": "Microsoft.Activities.Extensions",
+        "Version": "2.0.6.9"
+      },
+      "Assemblies": [
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.Design.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.dll"
+      ]
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.6.2"
       },
@@ -102,16 +112,6 @@
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "Microsoft.Activities.Extensions",
-        "Version": "2.0.6.9"
-      },
-      "Assemblies": [
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.Design.dll",
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.dll"
       ]
     }
   ],
