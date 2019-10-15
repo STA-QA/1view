@@ -32,7 +32,7 @@
         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAbCAYAAAAZMl2nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACBSURBVEhLY2BIKvpPKnbtmv7/2ct3/29dv0A1TJZDyMXYHADDow5BxwzYBAcCj0YNOh51CDoedQg6HnUIOqaZQ7BZhg/T1CHPJ8vDMbrF6HjUIeh4eDkEm8EgPCAOQbaUWDw4HYLMoQRjs4gQRtZP0xYaLkux4VGHoONRh6DiC/8BVbg41kY58XAAAAAASUVORK5CYII=" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Birmingham High Street ( -*' /&gt;" TimeoutMS="6000" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Dolphin&amp;apos;s Booking Management Module - Covent Garden ( GBP ) - \\*' /&gt;" TimeoutMS="6000" WaitForReady="INTERACTIVE" />
       </ui:ClickImage.Target>
     </ui:ClickImage>
     <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Branch'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">

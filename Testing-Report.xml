@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Test-Suite name="UiPath Project - Test Automation" total="2" passed="2" failures="0" execution-date="10/15/2019 17:04:54" total-time="00:00:31">
+  <Result>
+    <TestScenario>Launch Citrix App</TestScenario>
+    <TestName>Launch Citrix App</TestName>
+    <Started>10/15/2019 17:04:52</Started>
+    <Ended>10/15/2019 17:04:54</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Launch Dolphin Server</TestScenario>
+    <TestName>Launch Dolphin Server</TestName>
+    <Started>10/15/2019 17:04:55</Started>
+    <Ended>10/15/2019 17:05:24</Ended>
+    <Status>PASSED</Status>
+  </Result>
+</Test-Suite>
