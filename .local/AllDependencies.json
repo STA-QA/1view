@@ -221,7 +221,7 @@
           "lib/net45/ICSharpCode.SharpZipLib.dll": {}
         }
       },
-      "UiPath/19.7.7128.27029": {
+      "UiPath/19.12.7284.25613-preview": {
         "type": "package",
         "compile": {
           "lib/_._": {}
@@ -795,10 +795,10 @@
         "sharpziplib.nuspec"
       ]
     },
-    "UiPath/19.7.7128.27029": {
-      "sha512": "qwGn1866LHnldXmQnKGABNcppK0eVtS5QkUSS3fNMPQ/bbvFRhlZMjjI/UQvRzK/VrrSO3F1fiPaBi0mE7+w7A==",
+    "UiPath/19.12.7284.25613-preview": {
+      "sha512": "cnlupqn+IdfZAEnKmpCHOimSmpFcUsWL7SSTswUZJpNWIZVZrm0hTnEZZ3iOrHSiXVw5wXjPgj8UcJPvS1kBNg==",
       "type": "package",
-      "path": "uipath/19.7.7128.27029",
+      "path": "uipath/19.12.7284.25613-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -840,13 +840,15 @@
         "build/UiPath/UiPath_x64.dll",
         "build/UiPath/aahook.dll",
         "build/UiPath/aahook_x64.dll",
+        "build/UiPath/libcurl_x64.dll",
+        "build/UiPath/libcurl_x86.dll",
         "build/UiPath/license.config",
         "build/UiPath/msvcr100.dll",
         "build/UiPath/slinject.exe",
         "build/UiPath/x64/ShaferFilechck_x64.DLL",
         "build/UiPath/x64/msvcr100.dll",
         "lib/UiPath.Interop.dll",
-        "uipath.19.7.7128.27029.nupkg.sha512",
+        "uipath.19.12.7284.25613-preview.nupkg.sha512",
         "uipath.nuspec"
       ]
     },
@@ -1099,6 +1101,7 @@
     "": [],
     ".NETFramework,Version=v4.6.1": [
       "Microsoft.Activities.Extensions >= 2.0.6.9 <= 2.0.6.9",
+      "UiPath >= 19.12.7284.25613-preview <= 19.12.7284.25613-preview",
       "UiPath.Excel.Activities >= 2.6.2 <= 2.6.2",
       "UiPath.Mail.Activities >= 1.5.1 <= 1.5.1",
       "UiPath.System.Activities >= 19.7.0 <= 19.7.0",
@@ -1106,15 +1109,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\": {}
+    "C:\\Users\\rekha.rajendran\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "OneView",
       "projectName": "OneView",
-      "projectPath": "C:\\Users\\Kiranmai.adams\\Documents\\UIPath_Team\\OneView\\.local",
-      "packagesPath": "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kiranmai.adams\\Documents\\UIPath_Team\\OneView\\.local"
+      "projectPath": "C:\\Users\\rekha.rajendran\\UiPath\\OneView\\OneView\\.local",
+      "packagesPath": "C:\\Users\\rekha.rajendran\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rekha.rajendran\\UiPath\\OneView\\OneView\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1123,6 +1126,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[2.0.6.9, 2.0.6.9]"
+          },
+          "UiPath": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[19.12.7284.25613-preview, 19.12.7284.25613-preview]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",

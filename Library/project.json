@@ -1,18 +1,16 @@
 {
-  "name": "OneView",
-  "description": "Blank Library",
+  "name": "Library",
+  "description": "Library",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "Microsoft.Activities.Extensions": "2.0.6.9",
-    "UiPath": "19.12.7284.25613-preview",
-    "UiPath.Excel.Activities": "2.6.2",
-    "UiPath.Mail.Activities": "1.5.1",
-    "UiPath.System.Activities": "19.7.0",
-    "UiPath.UIAutomation.Activities": "19.7.0"
+    "UiPath.Excel.Activities": "2.6.3",
+    "UiPath.Mail.Activities": "1.6.0",
+    "UiPath.System.Activities": "19.8.0",
+    "UiPath.UIAutomation.Activities": "19.8.0-ce"
   },
   "webServices": [],
   "schemaVersion": "4.0",
-  "studioVersion": "19.7.0.0",
+  "studioVersion": "19.8.0.0",
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
@@ -31,8 +29,7 @@
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
-    },
-    "fileInfos": []
+    }
   },
   "expressionLanguage": "VisualBasic"
 }

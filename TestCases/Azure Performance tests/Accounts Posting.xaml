@@ -1,0 +1,248 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1112,999.333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Configuration.Install</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="1092,939.333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="sd:Stopwatch" Name="Timer" />
+      <Variable x:TypeArguments="s:DateTime" Name="Starttime" />
+      <Variable x:TypeArguments="s:DateTime" Name="Stoptime" />
+      <Variable x:TypeArguments="x:String" Default="B3" Name="CellValue1" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">340,52.6666666666667</av:Point>
+        <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">370,127.333333333333 370,205.333333333333</av:PointCollection>
+        <x:Double x:Key="Width">1058</x:Double>
+        <x:Double x:Key="Height">903.00000000000034</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID4</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">300,323.666666666667</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">500,350 650,350 650,414.02</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke StopwatchStart workflow" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WorkFlows\Stopwatch\StopwatchStart.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InOutArgument x:TypeArguments="sd:Stopwatch" x:Key="Timer">[Timer]</InOutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">550,414.02</av:Point>
+              <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">650,466.686666666667 650,496.686666666667 510,496.686666666667 510,650 480,650</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound Found="{x:Null}" DisplayName="Image Exists 'wfica32.exe Posting'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAkCAYAAABIWJJJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUSSURBVHhe7ZnrU9RVHIf7F2rKmhxzuFgiNZU6QyCmNZoG2SjgBYQJMQhEQVgXKSCZRBNcRJElRZH7cglwA7nLcme5LLdkrKbSaXLMepOvqtEXT2dZIX6yTji+WXbPi+fN2e9+fmfmPPs733P2qcnxASSSaaQQEgVSCIkChRA/XB/jzu1f+P23XyUOikKImz9d5/79e9y/d49//v5L4mDcvfundSH+uHOLH7+fkDgYDfV660LcvnVzZkziOOhKi6QQkv+QQkgUSCEkCqQQEgVSCIkC+xKiQ0db4VEOxUayL/LjGRLTtWhrmjCZatBrT3MuJZPSlk46h6xkODj2IcRoD5PGRjovJKOJeI/lr77MUhdnXB/gFaRif24lxsFsNIE7CVmxjUPFLVT3WMlycOxDiF49kyUxxPoF4ekdjrrgEhdqdOgf0NDcREdvExNjOVKI/8EOhOhksDGfqmhfokKiCUy4QFVvN8Y5dW0CrRUhugS1Yis5ykmxvcRMbTNxJKZoKGhWbiumxouiTo0qJkLUJJGUmkdt3/SzzDmXlTmpGr4orGNwsG8mw9ZZ+EKM1NGmS0e99l2xiBloDWLhRq3UPUKIb4cbGG4/QlrwBjY+/xLLnZxwXeLOSg8/QrKqKWztZny8n2vjHbRmH+SY/+ssd3MRW9Jm3vFNJsdgwCDyLTmpnAjdhM9iJ9ycl7B4TQDe+7KoM3QyYnVOtsfCF6Jb/Gq/SsBnTSTJJy7RYBoQC2il7hFCDDQXoFO5ER6+G3+VltKyUvRnVGhid+Lq8xmqs5V0jbczMZ5PbsQBoj1CScrPJ6+mlsaGFoym/qnnmXPKD7mToBIN7fEiyiuyORa1h2i/EI5WtVDXZ21OtsfCF6Ijl5qzcazziiM5o4R2MTbxcM0U1oRoxlCZzhGvZYRFqIgvbsc4ZLRknorE+xU/IhNzKOszMDpWTG5kMKGrNvHh8Uuca7g6K1vkVKWR6v0MH3i/hee2PewN38lWr5Vs9FhHmLaBkquz52K72MEb4jy12ng2rv6ET9Me9w1RQWNBInue9SAy/BiZrQMMj5hrK2gqTCTsOcu4prVHjNdTkRZK7BYP3HapiUvPn/WGMNcfJGzRIt54ehEvLHXG2dlywlm9bhN7zzRSJrLnzsn2sIMeoowr+YfZ/eJ69u9/3B5ivkIYxXgvw131tJad4mLCZnZsCJjVQ5jrDwsh3iQkIAZ1no6Kry0nnCv1tbT3iO8KUefOyfZY+EKI13VXdSaZ73uyO/AAwV+W02zsZXRO3ZNsGQNiy7DkTPTXYyxPIDHAny1vf8QRfSt1Q3rayj4n3n0ZwSHxxImcfnPOnDnYPnYghFgsQyXtJ/0JC9rFmu1qNMWF6OZ5DzG/prJf9CUdDFz9hraaIupqzlgaRv/phrGNbr2GLH9XdmwPZIsqhxJzzqzGc8zKvG0RuxDimqmbsW49l7OiSdq1ihUrXHGa503l/I6d7eLYmc/52B0EuTjh7mI5Uq6Nnj5S9jHeW01/cRRxWz15TeQsM+eIo+l6n6SZo6m1udsadiHENMONF7k8c3E03/8y5nMxZaXm4UunEQOTPUXoslJIEZ8fmMp5+PLK9rErISRPjhRCokAKIVEghZAokEJIFDxSiFHTEFUVpRIH42z2aaUQ302OcuPGzxQVFaFWqyUOiEKIpiu17IuKIiAgAF9fX4kDohCiy9DE6VMZZJxIkzgoCiEkEimEZBYD/AvJWbCKibBrLwAAAABJRU5ErkJggg==" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Posting - \\Remote' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">280,623.666666666667</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">380,676.333333333333 380,733.666666666667</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExcelApplicationScope workflow" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="WorkFlows\Azure tests\ExcelApplicationScope.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="sd:Stopwatch" x:Key="Timer">[Timer]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="CellValue">[CellValue1]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InvokeWorkflowFile>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID0">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">280,733.666666666667</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke StopwatchStop1 workflow" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="WorkFlows\Stopwatch\StopwatchStop1.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InOutArgument x:TypeArguments="sd:Stopwatch" x:Key="Timer">[Timer]</InOutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">280,423.666666666667</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="AP window open" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+        <ui:ClickImage.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:ClickImage.CursorPosition>
+        <ui:ClickImage.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAcCAYAAABGWNzNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAATBSURBVGhD7ZnrU5RVHMf9F2rKmhxzuJVITaXOEBfTGk3DbBTwAsKEGLSKgrAuUkAyiSa6iCJL3lZYLsslFjdwl5u73FkuCyzJVDOVvnGapjf5qhp98eksK4SyTuv4Zp/2efF5c/a33+fMnM8+53fOLrr98/fcv3+P+/fu8fdff8r4GHfv/sGcBL//doeffpyS8TFMrcZ/Jfj1zm2mHcMyPoa+RidL4OvIEsjIEsjIEsgIZAlk/gcSdOvpqjzG4QwF+xWfzJFTpEFjaMNuN2DUnOVCfjE1HT30jLrJ8HGkK8FEP9M2Mz2X81Cnvs/y115hWYA/gQ8Ij1dyoLwB20gp6ridJK7YxuGqDpr63WT5ONKVYMDIdHU6GdHxhEWmoKq4ymWDHuMDTO1tdA+0MTVZJkvwH0hUgh5GzFoa0zazLzGNuOzLNA70YVtQ1yXQuJGgV9AstoljnBZbR/rMFpJJTr6aivaHtwy7+YqoU6FMTxU1ueQWXKJ5cPZZzpxrD+cUqPmysoWRkcG5DG9HmhKMt9ClL0K15j2xcKfQWMViTbipe4wE342ZGLMcpTBhPRteeJnlfn4ELg1hZWg0iSVNVHb24XAMcdPRTWfpIY7HvMHy4ACx3Wzi3c15lFmtWEW+K6eAk0kbiVriR7D/UpZExBK5v4QWaw/jbufkfUhTgj7x6/w6m6gIBXknr2KyD4tFc1P3GAmG2yvQK4NJSdlNjFJDTW0NxnNK1Bk7CYz6HOX5BnodFqYcWspTD5IWmkSuVsslQzNmUwc2+9DM85w5dYdDyFaKpvSEjrr6Uo7v20NadCLHGjtoGXQ3J+9DmhJ0l2M4n8na8EzyTlVjEWNTj9bM4E6CdqwNRRwNDyI5VUlWlQXbqM2VeUZB5KvRKHLKqB20MjFZRbkigaRVG/noxFUumG7MyxY5jYUURD7Lh5FvE7ZtD3tTdrI1fCUbQteSrDFRfWP+XLwXib4JLtKsyWLD6k/5rPBJ3wT1mCty2PNcKIqU4xR3DjM27qytp60yh+TnXePqzn4x3kp9YRIZW0IJ3qUis0g7703grD9E8uLFvPnMYl5c5o+/v+tksnrtRvaeM1MrshfOyfuQaE9Qy3XtEXa/tI4DB560J/BUApsYH2Cst5XO2jNcyd7EjvWx83oCZ/0RIcFbJMamo7qkp/4b18nkemszln7xXSHnwjl5H9KUQLyKe5uKKf4gjN1xB0n4qo522wATC+qeZjsYFtuBK2dqqBVbXTY5sTFseedjjho7aRk10lX7BVkhQSQkZpEpcoacOQvm4P1IVAKxQNYGLKdjSI7fRcR2FeqqSvQe3hN41hgOiT6jm+Eb39Jl0NFiOOdq+mJmm74u+oxqSmIC2bE9ji3KMqqdOfOax0k38/ZGJCvBTXsfk31GrpWkkbtrFStWBOLn4Y2hZ0dEizgiarmYsYP4AD9CAlzHvzVps8e/QRwDTQxV7SNzaxivi5wgZ444Rq6Lyp07Rrqbu7chWQlmGTNf4drcZY6n/x14clnkpubRi6BxK9P9OvQl+eSLzw/O5Dx6oeT9SF4CmadHlkBGlkBGlkBGIEsg87AEE/ZRGutrZHyM86VnWfTD9AS3bv2CTqdDpVLJ+Bwq/gHuuoQvdEqaJQAAAABJRU5ErkJggg==" />
+        </ui:ClickImage.Image>
+        <ui:ClickImage.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Posting - \\Remote' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:ClickImage.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ClickImage>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <FlowStep x:Name="__ReferenceID4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">270,205.333333333333</av:Point>
+          <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">370,274.666666666667 370,304.666666666667 400,304.666666666667 400,323.666666666667</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Native Citrix" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Dolphin's'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition OffsetX="348" OffsetY="57" Position="TopLeft" />
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b127878a73a06ebaa40cfc53121a8b0b" WaitForReady="INTERACTIVE" />
+          </ui:Click.Target>
+        </ui:Click>
+        <ui:HoverImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover Image 'wfica32.exe'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="HoverImage_2" KeyModifiers="None" SendWindowMessages="False">
+          <ui:HoverImage.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:HoverImage.CursorPosition>
+          <ui:HoverImage.Image>
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+          </ui:HoverImage.Image>
+          <ui:HoverImage.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' /&gt;" WaitForReady="INTERACTIVE" />
+          </ui:HoverImage.Target>
+        </ui:HoverImage>
+        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition OffsetX="114" OffsetY="20" Position="TopLeft" />
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a7cc14ece2e591b0c683eb2fd5ede4e4" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' /&gt;" WaitForReady="INTERACTIVE" />
+          </ui:Click.Target>
+        </ui:Click>
+      </Sequence>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID3</x:Reference>
+  </Flowchart>
+</Activity>
