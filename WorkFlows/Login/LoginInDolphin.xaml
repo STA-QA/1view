@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>742,1013</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>496,429.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginInDolphin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -57,16 +57,15 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login In Dolphin" sap:VirtualizedContainerService.HintSize="468,482" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="Login In Dolphin" sap:VirtualizedContainerService.HintSize="476,369.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="430,22" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="Login into Dolphin Server" Status="STARTED" TestCase="Login into Dolphin Server" />
-    <TryCatch DisplayName="Try Catch - Login In Dolphin" sap:VirtualizedContainerService.HintSize="430,266" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - Login In Dolphin" sap:VirtualizedContainerService.HintSize="434,277.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Flowchart DisplayName="LoginInDolphin" sap:VirtualizedContainerService.HintSize="630,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <Flowchart DisplayName="LoginInDolphin" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
           <Flowchart.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="NeedsLoginOverride" />
           </Flowchart.Variables>
@@ -74,8 +73,8 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-              <av:Size x:Key="ShapeSize">60,75</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,117</av:PointCollection>
+              <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,107.166666666667 292,107.166666666667 292,117</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
@@ -85,11 +84,11 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">192,117</av:Point>
-                <av:Size x:Key="ShapeSize">216,66</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,183 300,224.5</av:PointCollection>
+                <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">292,186.333333333333 292,224.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="216,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,11 +127,11 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">192,224.5</av:Point>
-                    <av:Size x:Key="ShapeSize">216,51</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">300,275.5 300,326.5</av:PointCollection>
+                    <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">292,277.166666666667 292,307.166666666667 299.833333333333,307.166666666667 299.833333333333,326.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ImageFound DisplayName="Verifying If Another user loggedIn" Found="[NeedsLoginOverride]" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                <ui:ImageFound DisplayName="Verifying If Another user loggedIn" Found="[NeedsLoginOverride]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ImageFound_1">
                   <ui:ImageFound.Image>
                     <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAANSURBVBhXY2BgYPgPAAEEAQBwIGULAAAAAElFTkSuQmCC" />
                   </ui:ImageFound.Image>
@@ -146,14 +145,14 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ImageFound>
                 <FlowStep.Next>
-                  <FlowDecision x:Name="__ReferenceID2" Condition="[NeedsLoginOverride=True]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                  <FlowDecision x:Name="__ReferenceID2" Condition="[NeedsLoginOverride=True]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.6666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <av:Point x:Key="ShapeLocation">260.5,326.5</av:Point>
-                        <av:Size x:Key="ShapeSize">79,87</av:Size>
-                        <av:PointCollection x:Key="TrueConnector">260.5,370 120,370 120,447</av:PointCollection>
-                        <av:PointCollection x:Key="FalseConnector">339.5,370 470,370 470,447</av:PointCollection>
+                        <av:Size x:Key="ShapeSize">78.6666666666667,86.6666666666667</av:Size>
+                        <av:PointCollection x:Key="TrueConnector">260.5,369.833333333333 112,369.833333333333 112,447</av:PointCollection>
+                        <av:PointCollection x:Key="FalseConnector">339.166666666667,369.833333333333 462,369.833333333333 462,447</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <FlowDecision.True>
@@ -161,11 +160,11 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">12,447</av:Point>
-                            <av:Size x:Key="ShapeSize">216,66</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">228,480 362,480</av:PointCollection>
+                            <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">212,481.666666666667 362,481.666666666667</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Overriding Login" sap:VirtualizedContainerService.HintSize="216,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Overriding Login" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -185,10 +184,10 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">362,447</av:Point>
-                                <av:Size x:Key="ShapeSize">216,66</av:Size>
+                                <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Select Branch" sap:VirtualizedContainerService.HintSize="216,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence DisplayName="Select Branch" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,7 +237,7 @@
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,105.333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -249,11 +248,10 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="EndTest_1" Status="FAILED" />
+            <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="EndTest_1" Status="FAILED" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="430,22" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="PASSED" />
   </Sequence>
 </Activity>
