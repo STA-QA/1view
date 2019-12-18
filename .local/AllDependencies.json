@@ -4527,9 +4527,9 @@
     "restore": {
       "projectUniqueName": "OneView",
       "projectName": "OneView",
-      "projectPath": "C:\\Users\\Kiranmai.adams\\Documents\\UIPath_Team\\OneView\\.local",
+      "projectPath": "C:\\QA Git Repos\\1view\\.local",
       "packagesPath": "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kiranmai.adams\\Documents\\UIPath_Team\\OneView\\.local"
+      "outputPath": "C:\\QA Git Repos\\1view\\.local"
     },
     "frameworks": {
       "net461": {

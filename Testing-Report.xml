@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Test-Suite name="UiPath Project - Test Automation" total="54" passed="35" failures="19" execution-date="10/15/2019 13:28:38" total-time="00:11:54">
+<Test-Suite name="UiPath Project - Test Automation" total="71" passed="47" failures="24" execution-date="10/15/2019 13:28:38" total-time="00:13:03">
   <Result>
     <TestScenario>LaunchingCitrixApplication</TestScenario>
     <TestName>Test</TestName>
@@ -376,6 +376,125 @@
     <TestName>Select Destination</TestName>
     <Started>12/16/2019 15:51:23</Started>
     <Ended>12/16/2019 15:51:25</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Enter The Lead Passenger Details in Folder Search</TestScenario>
+    <TestName>Enter The Lead Passenger Details in Folder Search</TestName>
+    <Started>12/18/2019 11:27:24</Started>
+    <Ended>12/18/2019 11:27:30</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Create New Record</TestScenario>
+    <TestName>Click Yes To Create New Record</TestName>
+    <Started>12/18/2019 11:27:35</Started>
+    <Ended>12/18/2019 11:27:36</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Fill the Passenger Address Details</TestScenario>
+    <TestName>Fill the Passenger Address Details</TestName>
+    <Started>12/18/2019 11:27:36</Started>
+    <Ended>12/18/2019 11:27:42</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Enter The Lead Passenger Details in Folder Search</TestScenario>
+    <TestName>Enter The Lead Passenger Details in Folder Search</TestName>
+    <Started>12/18/2019 11:28:35</Started>
+    <Ended>12/18/2019 11:28:42</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Enter The Lead Passenger Details in Folder Search</TestScenario>
+    <TestName>Enter The Lead Passenger Details in Folder Search</TestName>
+    <Started>12/18/2019 11:31:06</Started>
+    <Ended>12/18/2019 11:31:14</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Create New Record</TestScenario>
+    <TestName>Click Yes To Create New Record</TestName>
+    <Started>12/18/2019 11:31:18</Started>
+    <Ended>12/18/2019 11:31:19</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Fill the Passenger Address Details</TestScenario>
+    <TestName>Fill the Passenger Address Details</TestName>
+    <Started>12/18/2019 11:31:19</Started>
+    <Ended>12/18/2019 11:31:25</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Enter DOB</TestScenario>
+    <TestName>Enter DOB</TestName>
+    <Started>12/18/2019 11:31:48</Started>
+    <Ended>12/18/2019 11:31:50</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Launch Bifa From 1view</TestScenario>
+    <TestName>Launch Bifa From 1view</TestName>
+    <Started>12/18/2019 11:37:03</Started>
+    <Ended>12/18/2019 11:37:06</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Launch Bifa From 1view</TestScenario>
+    <TestName>Launch Bifa From 1view</TestName>
+    <Started>12/18/2019 11:40:01</Started>
+    <Ended>12/18/2019 11:40:04</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Launch Bifa From 1view</TestScenario>
+    <TestName>Launch Bifa From 1view</TestName>
+    <Started>12/18/2019 14:22:17</Started>
+    <Ended>12/18/2019 14:22:19</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Launch Bifa From 1view</TestScenario>
+    <TestName>Launch Bifa From 1view</TestName>
+    <Started>12/18/2019 14:29:37</Started>
+    <Ended>12/18/2019 14:29:39</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Enter The Lead Passenger Details in Folder Search</TestScenario>
+    <TestName>Enter The Lead Passenger Details in Folder Search</TestName>
+    <Started>12/18/2019 14:33:35</Started>
+    <Ended>12/18/2019 14:33:42</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Enter The Lead Passenger Details in Folder Search</TestScenario>
+    <TestName>Enter The Lead Passenger Details in Folder Search</TestName>
+    <Started>12/18/2019 14:36:16</Started>
+    <Ended>12/18/2019 14:36:22</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Fill the Passenger Address Details</TestScenario>
+    <TestName>Fill the Passenger Address Details</TestName>
+    <Started>12/18/2019 14:36:30</Started>
+    <Ended>12/18/2019 14:36:35</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Enter DOB</TestScenario>
+    <TestName>Enter DOB</TestName>
+    <Started>12/18/2019 14:36:58</Started>
+    <Ended>12/18/2019 14:37:00</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Launch Bifa From 1view</TestScenario>
+    <TestName>Launch Bifa From 1view</TestName>
+    <Started>12/18/2019 14:41:12</Started>
+    <Ended>12/18/2019 14:41:14</Ended>
     <Status>PASSED</Status>
   </Result>
 </Test-Suite>

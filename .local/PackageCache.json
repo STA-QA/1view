@@ -21,6 +21,15 @@
     },
     {
       "Package": {
+        "Id": "RBanda.TestReportGenerator.Activities",
+        "Version": "1.4.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\rbanda.testreportgenerator.activities/1.4.1\\lib/TestReportGenerator.dll"
+      ]
+    },
+    {
+      "Package": {
         "Id": "StopwatchTimer",
         "Version": "1.0.1"
       },
@@ -147,15 +156,6 @@
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "RBanda.TestReportGenerator.Activities",
-        "Version": "1.4.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\rbanda.testreportgenerator.activities/1.4.1\\lib/TestReportGenerator.dll"
       ]
     }
   ],
