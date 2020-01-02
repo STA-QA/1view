@@ -54,11 +54,12 @@
       <AssemblyReference>ActiproSoftware.Text.Addons.DotNet.Wpf</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Adding_Flights_Logic" sap:VirtualizedContainerService.HintSize="970,2061" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Adding_Flights_Logic" sap:VirtualizedContainerService.HintSize="970,2099" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="TestData" />
       <Variable x:TypeArguments="x:Int32" Name="NoOfHyphens" />
       <Variable x:TypeArguments="x:Boolean" Name="RulesDisplayed" />
+      <Variable x:TypeArguments="x:Boolean" Name="FlightsSelected" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -66,12 +67,12 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">936.5</x:Double>
-        <x:Double x:Key="Height">2024.632</x:Double>
+        <x:Double x:Key="Height">2063</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 330,77.5 330,97</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID17</x:Reference>
+      <x:Reference>__ReferenceID20</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
@@ -185,6 +186,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
                     </Sequence>
                     <FlowStep.Next>
                       <FlowStep x:Name="__ReferenceID14">
@@ -345,7 +347,7 @@
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <av:Point x:Key="ShapeLocation">140,1594.5</av:Point>
                                                         <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                        <av:PointCollection x:Key="ConnectorLocation">240,1645.5 240,1695.5</av:PointCollection>
+                                                        <av:PointCollection x:Key="ConnectorLocation">240,1645.5 240,1684.5</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Avail" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
@@ -372,92 +374,210 @@
                                                       </sap:WorkflowViewStateService.ViewState>
                                                     </ui:ClickImage>
                                                     <FlowStep.Next>
-                                                      <FlowStep x:Name="__ReferenceID16">
+                                                      <FlowStep x:Name="__ReferenceID17">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <av:Point x:Key="ShapeLocation">140,1695.5</av:Point>
-                                                            <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                                            <av:Point x:Key="ShapeLocation">140,1684.5</av:Point>
+                                                            <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                            <av:PointCollection x:Key="ConnectorLocation">240,1735.5 240,1765.5 240.141666666667,1765.5 240.141666666667,1785.5</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Sequence DisplayName="select flights in avail" sap:VirtualizedContainerService.HintSize="376,636" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                        <ui:ImageFound DisplayName="Flights already selected?" Found="[FlightsSelected]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+                                                          <ui:ImageFound.Image>
+                                                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA8SURBVChTjYqLCgAgDAL3/z9tGbj1MjoYTL3AB1aKqOkqUVikORAJh6RCv7LouQbdzmheAsnWCcQvCdAAU0IEC2OnSZIAAAAASUVORK5CYII=" />
+                                                          </ui:ImageFound.Image>
+                                                          <ui:ImageFound.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' title='SYD-HYD Tue 20 Oct / HYD-SYD Tue 27 Oct 1 ADT - \\Remote' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                                                          </ui:ImageFound.Target>
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                                                            <ui:ClickImage.CursorPosition>
-                                                              <ui:CursorPosition Position="Center">
-                                                                <ui:CursorPosition.OffsetX>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetX>
-                                                                <ui:CursorPosition.OffsetY>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetY>
-                                                              </ui:CursorPosition>
-                                                            </ui:ClickImage.CursorPosition>
-                                                            <ui:ClickImage.Image>
-                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAAfCAYAAAAyXDmDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVGhD7ZVBDsMgDAR5Oj9P5YOlNAksSwxJ6e7IhwgJG4+qprTFkXPefY1lZq9IbO4ZkdjJ1MQms0FWKXYchsRikFgm/WLtlFBPL5u8f88wsTdmauFZsf44r0Z+Wuz+vZ0ztfCsWId8JLVsv5vs4YSLdTrnaUViARL7RrHHe8k+hsRKLEfHLAz/IfZYBBL7NrGlO0f06oGcg0ViARJ7RyzJsGVfMLNXJBILWFUsW6XYcRgSi6mJjUyyRqr1Sr/YydjcMyKxk6mJvfoPRVWKHYchsRgklonEMthGQrfyjcQCwnu5UK9BSCxgWC+JPSOxGIkFSKzEckjsGYnFSCxAYiWWQ2LPLCF2MBILWFUsW6XYcRgSi6mJjcu2fQCCYzvOnzT5XAAAAABJRU5ErkJggg==" />
-                                                            </ui:ClickImage.Image>
-                                                            <ui:ClickImage.Target>
-                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' title='LON-HYD Fri 10 Jul / HYD-LON Fri 17 Jul 1 ADT - \\Remote' /&gt;" WaitForReady="INTERACTIVE" />
-                                                            </ui:ClickImage.Target>
-                                                          </ui:ClickImage>
-                                                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                                                            <ui:ClickImage.CursorPosition>
-                                                              <ui:CursorPosition Position="Center">
-                                                                <ui:CursorPosition.OffsetX>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetX>
-                                                                <ui:CursorPosition.OffsetY>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetY>
-                                                              </ui:CursorPosition>
-                                                            </ui:ClickImage.CursorPosition>
-                                                            <ui:ClickImage.Image>
-                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHsAAAAeCAYAAAAM/mGWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEZSURBVGhD7ZULCoQwDET36L25uxECRdy0kyatn8kjgiCdtE/x86uN/ZbeciilVHe5zMyKROaeVfsZ1eGRUHYbS/b5l2m3VZS9mJZspGJly5PAqwELANevSZM9MFMP15OtG9bu5Nay6/06Z+rherIVcOOQAF0bzFDCZSvOeXqhbCBDoey7yD6uC+YIlE3Z4zhmQXiv7GMDUPYdZP9bMyPLAzgHCmULGVkewDlQrisbJE3ACTOzIqFsB0+VjbZVlL0YS3Z07WckF/Y7ml/2QmTuWUXZi7Fkn/2TW20VZS+mJRspyh5FTifthCjbRXiWStZOgrIdpGVRdh+U3YayHVA2ZY9D2X1QdhvKdkDZlD0OZffxCNnJzJVdti+M/gmpHLGvAQAAAABJRU5ErkJggg==" />
-                                                            </ui:ClickImage.Image>
-                                                            <ui:ClickImage.Target>
-                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' omit:title='LON-HYD Fri 10 Jul / HYD-LON Fri 17 Jul 1 ADT - \\Remote' /&gt;" WaitForReady="INTERACTIVE" />
-                                                            </ui:ClickImage.Target>
-                                                          </ui:ClickImage>
-                                                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                                                            <ui:ClickImage.CursorPosition>
-                                                              <ui:CursorPosition Position="Center">
-                                                                <ui:CursorPosition.OffsetX>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetX>
-                                                                <ui:CursorPosition.OffsetY>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetY>
-                                                              </ui:CursorPosition>
-                                                            </ui:ClickImage.CursorPosition>
-                                                            <ui:ClickImage.Image>
-                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAdCAYAAABsQ9h8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF5SURBVGhD7ZPRbsMwDAP76fnzrEIbzNMUU4yt1utI4B5WMLbBw2737Ptew7Zt4e8VvPKumTzeHcfcsPTSbnTv/nzITCQeg8QzKRFvvZao42FlMGd7qsSPvCnD0uKt0/b832f8ZfHHW0belGFp8R77JvMdI+M4M3u2Z7b4g6vvySLxzzOzZ3skHveHxFs/+01Whj+TueNA4nH/snjrMn2Jxywv3nrZ7gEr3hN1z5B43KfFWyfT82RknJ3N3inxuH9ZvCfqtkg8ZmnxV6mSEfHKu2Yi8YN8qniWXiR+IXriZ+eXePtB/C/0H/9mHu9+TdqNJP7N9MSbG5ZeJH4hkHgmEj8R26d+ozhIpA/qS3wC26Ul6sxA4gepusv2qd8oDhLpg/oST2D71G8UB4n0QX2JJ7B96jeKg0T6oL7EE9g+9RvFQSJ9UF/iCWyf+o3iIJE+qC/xBLZP/UZxkEgf1Jd4AtunfqM4SKQP6kv8Qkj8IJ8qnqWX741u+xcLeOpJcRG7rAAAAABJRU5ErkJggg==" />
-                                                            </ui:ClickImage.Image>
-                                                            <ui:ClickImage.Target>
-                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' omit:title='LON-HYD Fri 10 Jul / HYD-LON Fri 17 Jul 1 ADT - \\Remote' /&gt;" WaitForReady="INTERACTIVE" />
-                                                            </ui:ClickImage.Target>
-                                                          </ui:ClickImage>
-                                                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                                                            <ui:ClickImage.CursorPosition>
-                                                              <ui:CursorPosition Position="Center">
-                                                                <ui:CursorPosition.OffsetX>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetX>
-                                                                <ui:CursorPosition.OffsetY>
-                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                </ui:CursorPosition.OffsetY>
-                                                              </ui:CursorPosition>
-                                                            </ui:ClickImage.CursorPosition>
-                                                            <ui:ClickImage.Image>
-                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAdCAYAAABlqHgGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE+SURBVGhD7ZWLDoIwDEX59P05gmQRZ2l7WTfmchuPiaTpY2eGZV23TzApJfF5C3r2iuSYW45lWWC02HttGd8DREDRNpZoJEJEn2/NUdAGPXykdkkr0TUzeRhKdLls+fuKfxadZ6mZycNQoku8yyOHn2t6a5dEi87cnccLRQs5GhRt50OikcW9h1/WRHpkKNrOd4tGl6Zom+FE31kYFV0i5V5B0Xa+Kfrusp7Dv6qN9qRoO98tukTKPUPRNkOJvkurw5fo2SsSigaZVTSKFhT9IJro6HiL3r/I/GzX6/e21bIXlp63oGevSI65+wRFP4gmWnoHW2hB0Q9iiUaCoiv4/FPaQNEg0b2y4IyUEwFFg7TqRdEOKNqGokEo2s6naAWKdkDRNhQNQtF2PkUrULSDGUS3hqJBZhWNokVKaX0BqfTK1kb7B38AAAAASUVORK5CYII=" />
-                                                            </ui:ClickImage.Image>
-                                                            <ui:ClickImage.Target>
-                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' omit:title='LON-HYD Fri 10 Jul / HYD-LON Fri 17 Jul 1 ADT - \\Remote' /&gt;" WaitForReady="INTERACTIVE" />
-                                                            </ui:ClickImage.Target>
-                                                          </ui:ClickImage>
-                                                        </Sequence>
+                                                        </ui:ImageFound>
+                                                        <FlowStep.Next>
+                                                          <FlowDecision x:Name="__ReferenceID18" Condition="[FlightsSelected]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <av:Point x:Key="ShapeLocation">200.641666666667,1785.5</av:Point>
+                                                                <av:Size x:Key="ShapeSize">79,87</av:Size>
+                                                                <av:PointCollection x:Key="FalseConnector">279.641666666667,1829 440,1829 440,1967</av:PointCollection>
+                                                                <av:PointCollection x:Key="TrueConnector">200.641666666667,1829 120,1829 120,1934.02</av:PointCollection>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <FlowDecision.True>
+                                                              <FlowStep x:Name="__ReferenceID19">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <av:Point x:Key="ShapeLocation">20,1934.02</av:Point>
+                                                                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Flights are already selected&quot;]">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </ui:LogMessage>
+                                                              </FlowStep>
+                                                            </FlowDecision.True>
+                                                            <FlowDecision.False>
+                                                              <FlowStep x:Name="__ReferenceID16">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <av:Point x:Key="ShapeLocation">340,1967</av:Point>
+                                                                    <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <Sequence DisplayName="Select Flights" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <Sequence DisplayName="Image" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LON HYDTu Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_15" InformativeScreenshot="0a438bfb2280969fd05973a028a40f70" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' omit:title='LON-HYD Tue 20 Oct / HYD-LON Tue 27 Oct 1 ADT - \\Remote' /&gt;">
+                                                                      <ui:WindowScope.Body>
+                                                                        <ActivityAction x:TypeArguments="x:Object">
+                                                                          <ActivityAction.Argument>
+                                                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                          </ActivityAction.Argument>
+                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                              <ui:ClickImage.CursorPosition>
+                                                                                <ui:CursorPosition OffsetX="30" OffsetY="-5" Position="Center" />
+                                                                              </ui:ClickImage.CursorPosition>
+                                                                              <ui:ClickImage.Image>
+                                                                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKIAAAAeCAYAAACv+sUVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHbSURBVHhe7ZbbisUgDEX76f3zM/VB2EguxolWy3YRiFGidRaHua7fHO77htlcVp6VSbm3Nq7nLxMZ3v7t3whSm7IzoG34w4P9kWmP/I879bCViNa3Smttrc7b6AVSmcHGR4uI3zt4px4+KSIi1TQgtYk0fQjJUXsHz6iki1gZvE8vFBGA1CbS9IEi+lBEAFKbSNOHbjnavsFzChRxkYhSeHt6gdQm2Jgi+hwnItLWevZYQGoTafoQFrGNABSRIqp0yaH1nHHWCMF7RKGIAKQ2kaYPFNFnSxHbwDWkrfXssYA0lWlyCKw8K5OtRHwbSFOhiD6eiNGwBkVcwBdFzB7bv1G5IIPxdvAX8UXKvVeN7d8I0lQooo8lovQ/oBfWoIgL+KqIkUERFT4hYnmdaS+0mYj1WzEktDWpru2VgDSVo0WsDxh5yAG2FFGbVyJ1ba8EpKkcLWIl8pADHCdirVlriFTTgDQViuhDEQFIU6GIPluKiIG0NW0uRQ+QpkIRfbYUMWtekGoakKZCEX2OFLGNdh2RahqQpkIRfY4RsV2reHukmgakqVBEny1FxGjXWrAu7ZFqGpCm8gkRJ7OViG8DaSoU0ccTMRrWoIgL+KKI2WP7NyoXZDDejfv3B7X5MK/gEKBzAAAAAElFTkSuQmCC" />
+                                                                              </ui:ClickImage.Image>
+                                                                              <ui:ClickImage.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                              </ui:ClickImage.Target>
+                                                                            </ui:ClickImage>
+                                                                          </Sequence>
+                                                                        </ActivityAction>
+                                                                      </ui:WindowScope.Body>
+                                                                    </ui:WindowScope>
+                                                                  </Sequence>
+                                                                  <Sequence DisplayName="Image" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LON HYDTu Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_16" InformativeScreenshot="b3c1ff4f57e29efa463f55fe7a0bde09" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' omit:title='LON-HYD Tue 20 Oct / HYD-LON Tue 27 Oct 1 ADT - \\Remote' /&gt;">
+                                                                      <ui:WindowScope.Body>
+                                                                        <ActivityAction x:TypeArguments="x:Object">
+                                                                          <ActivityAction.Argument>
+                                                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                          </ActivityAction.Argument>
+                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                              <ui:ClickImage.CursorPosition>
+                                                                                <ui:CursorPosition OffsetX="48" OffsetY="8" Position="Center" />
+                                                                              </ui:ClickImage.CursorPosition>
+                                                                              <ui:ClickImage.Image>
+                                                                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHkAAAAeCAYAAAAIC7GrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVGhD7ZUBboQwDAR5Oj+n2muNoghsb3CgpbsjSwdn4pBpdcuy1bOua3M1lztnVYJ93xVJfghP8gIrZHlBSzmSHBNJZlIjGV3EnwN98OT6LdMkX9hTht8j2V7UKsmflty+7+CeMlyV3PZE/bnXQFeu8wN18LY2OcMol2wM7ifLFcm2N0vc3ww+5WfRLJIck5Xcfkb2fTk9fdAeYwsnSR98vy45B/wHyXa976n5Humv++CRGFs8iSTHsJLb6nN0rw0ei7EBSWjJfRG8XTKy76W7bzm7b8GjMTYkSergz9acMWsEch8sjGTk6J7F+w7JvQa6cp0fJDmGlewl6p/yGtMO/oA7Z1UiyQRvlcyWF7SUI8kxnuTqLBimenfpP/khsO+7IskP4Uk++s2NygtaypHkmEgyE0keBScz5XS+kWSC8lkm12oSkkwwbZYk+0hyjCQTSLIkjyPJPpIcI8kEkizJ40iyzyskT0aSCd4qma3zbNsXiDDNLlNgn/8AAAAASUVORK5CYII=" />
+                                                                              </ui:ClickImage.Image>
+                                                                              <ui:ClickImage.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                              </ui:ClickImage.Target>
+                                                                            </ui:ClickImage>
+                                                                          </Sequence>
+                                                                        </ActivityAction>
+                                                                      </ui:WindowScope.Body>
+                                                                    </ui:WindowScope>
+                                                                  </Sequence>
+                                                                  <Sequence DisplayName="Image" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LON HYDTu Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_11" InformativeScreenshot="099d3fa59f9127b9c2a1f851ac87be7c" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' omit:title='LON-HYD Tue 20 Oct / HYD-LON Tue 27 Oct 1 ADT - \\Remote' /&gt;">
+                                                                      <ui:WindowScope.Body>
+                                                                        <ActivityAction x:TypeArguments="x:Object">
+                                                                          <ActivityAction.Argument>
+                                                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                          </ActivityAction.Argument>
+                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                              <ui:ClickImage.CursorPosition>
+                                                                                <ui:CursorPosition OffsetX="47" OffsetY="-6" Position="Center" />
+                                                                              </ui:ClickImage.CursorPosition>
+                                                                              <ui:ClickImage.Image>
+                                                                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAhCAYAAAAWEL/QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVHhe7ZlLsoMwDAQ5OkfjZkQUCPMRHgtkF4836swikcu/DpVFumEYxhrp+978vEZarhWZlvvupsWY76cbp1eFzJO3oeVakUz7blVi5SwpIhSNyYnuOhnhTK6kuxcUFYrGINGeChG9/dbME+K4L1/nv0E10Q/2VMKrROthr95f5U+L1r082FMJrxJ9jB7e6m3juvxlzjVOwkUrN/dTCkU7oWg8XrpJDooe3OodU3z5y5wrx/cFUDQeL90kJxc9tNWzQtGY14nWA1u9q7hFH+OAovF46SY5VvSwVi+Xostf5j5x9fkFFI3HSzfJsbIe9hBr7DYUjXmV6LupdvkGLdeKhKKdfFW0N7mS7l5QVCgakxMdXfw/+p9EHr/z0xiRefI2tFwrkmnfrUqsnCVFhKIxOdHWbzBKrqS7FxQVisYg0Z6i6Cfo01IJinYSvpYK1lSCop1UW4uicSgaQ9FOKBqPl26SExmKxlC0E4rG46Wb5ESGojEU7YSi8XjpJjmR+YToylC0k6+K9iZX0t0LigpFY3KiY2scfyKKnNCIsU5NAAAAAElFTkSuQmCC" />
+                                                                              </ui:ClickImage.Image>
+                                                                              <ui:ClickImage.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                              </ui:ClickImage.Target>
+                                                                            </ui:ClickImage>
+                                                                          </Sequence>
+                                                                        </ActivityAction>
+                                                                      </ui:WindowScope.Body>
+                                                                    </ui:WindowScope>
+                                                                  </Sequence>
+                                                                  <Sequence DisplayName="Image" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LON HYDTu Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_14" InformativeScreenshot="f4792d47b4c84af09319cb7a54f48437" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' idx='1' omit:title='LON-HYD Tue 20 Oct / HYD-LON Tue 27 Oct 1 ADT - \\Remote' /&gt;">
+                                                                      <ui:WindowScope.Body>
+                                                                        <ActivityAction x:TypeArguments="x:Object">
+                                                                          <ActivityAction.Argument>
+                                                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                          </ActivityAction.Argument>
+                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe LON-HYD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                              <ui:ClickImage.CursorPosition>
+                                                                                <ui:CursorPosition OffsetX="48" OffsetY="7" Position="Center" />
+                                                                              </ui:ClickImage.CursorPosition>
+                                                                              <ui:ClickImage.Image>
+                                                                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHkAAAAeCAYAAAAIC7GrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGySURBVGhD7ZWBcoQgDET9dP/chmKAQ0iIBqb1dvf25iSZgL463Y6DPhOy7zt9r/HKvTwdzr1CROQKyCOArFuCvG3UYUxPVPmE4xVA1q1Btugx5PKvJQ7TY37wPP+Gp0F+cKYR/xnIfKO9617+NWQ+y4Mzjfgp5LJH6qdKhDIavvFWrYzpwZ8zU4x2h8y+eZ5RP4HMZ2NJ/VSJUEaTh8sBZN2jkMvfQelcQk8pqoTiWPJgPcMP/pyZXF8P+Bsg83U6U1EPqq9LUSUU9eTBYwFk3VbIZWq11lhUiVCk5MHjMUOuY/DbIQels1TrrN56EFUilF7yYFuGHvw5++LeesffADmotcYSa78fIelGq7R6ywCybitkSVI/VTIYz0x78A2v3MvTgGzwWyFb0xNVPuF4BZB1S5A9tYWNkHeHXrvrW+iROHyNV+7l6XDuFSIiV0AeAWTdEuTW/1wtPVHlE45XAFm3BtkiQL5rfksmGZANdt+L4XImGZANnrYXIMsBZN2AbDAgy/1UyWA8A8i6AdlgQJb7qZLBeAaQdQOywYAs91Mlg/HMKyBPNiAb/FbI1rR1HD9+Je8ooA+HWAAAAABJRU5ErkJggg==" />
+                                                                              </ui:ClickImage.Image>
+                                                                              <ui:ClickImage.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                              </ui:ClickImage.Target>
+                                                                            </ui:ClickImage>
+                                                                          </Sequence>
+                                                                        </ActivityAction>
+                                                                      </ui:WindowScope.Body>
+                                                                    </ui:WindowScope>
+                                                                  </Sequence>
+                                                                </Sequence>
+                                                              </FlowStep>
+                                                            </FlowDecision.False>
+                                                          </FlowDecision>
+                                                        </FlowStep.Next>
                                                       </FlowStep>
                                                     </FlowStep.Next>
                                                   </FlowStep>
@@ -562,7 +682,7 @@
         <x:Reference>__ReferenceID1</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID17">
+    <FlowStep x:Name="__ReferenceID20">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">230,97</av:Point>
@@ -620,5 +740,8 @@
     <x:Reference>__ReferenceID14</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
     <x:Reference>__ReferenceID16</x:Reference>
+    <x:Reference>__ReferenceID17</x:Reference>
+    <x:Reference>__ReferenceID18</x:Reference>
+    <x:Reference>__ReferenceID19</x:Reference>
   </Flowchart>
 </Activity>
