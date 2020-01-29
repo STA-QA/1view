@@ -157,6 +157,21 @@
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.dll"
       ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Citrix.Activities",
+        "Version": "1.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.citrix.activities/1.0.0\\lib/net461/CookComputing.XmlRpcV2.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.citrix.activities/1.0.0\\lib/net461/Newtonsoft.Json.CH.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.citrix.activities/1.0.0\\lib/net461/UiPath.Citrix.Activities.Design.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.citrix.activities/1.0.0\\lib/net461/UiPath.Citrix.Activities.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.citrix.activities/1.0.0\\lib/net461/UiPath.Citrix.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.citrix.activities/1.0.0\\lib/net461/XenServer.dll"
+      ]
     }
   ],
   "Conflicts": [],
@@ -706,6 +721,11 @@
       "Version": "4.3.0",
       "Dependencies": []
     },
+    "System.ValueTuple": {
+      "Id": "System.ValueTuple",
+      "Version": "4.5.0",
+      "Dependencies": []
+    },
     "System.Xml.ReaderWriter": {
       "Id": "System.Xml.ReaderWriter",
       "Version": "4.3.0",
@@ -720,6 +740,16 @@
       "Id": "UiPath",
       "Version": "19.7.7128.27029",
       "Dependencies": []
+    },
+    "UiPath.Citrix.Activities": {
+      "Id": "UiPath.Citrix.Activities",
+      "Version": "1.0.0",
+      "Dependencies": [
+        {
+          "Item1": "System.ValueTuple",
+          "Item2": "[4.5.0, )"
+        }
+      ]
     },
     "UiPath.Excel.Activities": {
       "Id": "UiPath.Excel.Activities",

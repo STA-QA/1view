@@ -873,6 +873,19 @@
           "lib/net451/_._": {}
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/System.ValueTuple.dll": {}
+        }
+      },
       "System.Xml.ReaderWriter/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -908,6 +921,124 @@
         },
         "build": {
           "build/_._": {}
+        }
+      },
+      "UiPath.Citrix.Activities/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/CookComputing.XmlRpcV2.dll": {},
+          "lib/net461/Newtonsoft.Json.CH.dll": {},
+          "lib/net461/UiPath.Citrix.Activities.Design.dll": {},
+          "lib/net461/UiPath.Citrix.Activities.dll": {},
+          "lib/net461/UiPath.Citrix.dll": {},
+          "lib/net461/XenServer.dll": {}
+        },
+        "resource": {
+          "lib/net461/de/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/de/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/de/UiPath.Citrix.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/es-MX/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es-MX/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es-MX/UiPath.Citrix.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/es/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/es/UiPath.Citrix.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/fr/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/fr/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/fr/UiPath.Citrix.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/ja/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ja/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ja/UiPath.Citrix.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ko/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/ko/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/ko/UiPath.Citrix.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/pt-BR/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt-BR/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt-BR/UiPath.Citrix.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/pt/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/pt/UiPath.Citrix.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/ru/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/ru/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/ru/UiPath.Citrix.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/tr/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/tr/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/tr/UiPath.Citrix.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/zh-CN/UiPath.Citrix.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net461/zh-CN/UiPath.Citrix.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net461/zh-CN/UiPath.Citrix.resources.dll": {
+            "locale": "zh-CN"
+          }
         }
       },
       "UiPath.Excel.Activities/2.6.2": {
@@ -4065,6 +4196,50 @@
         "system.threading.timer.nuspec"
       ]
     },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Xml.ReaderWriter/4.3.0": {
       "sha512": "GrprA+Z0RUXaR4N7/eW71j1rgMnEnEVlgii49GZyAjTH7uliMnrOU3HNFBr6fEDBCJCIdlVNq9hHbaDR621XBA==",
       "type": "package",
@@ -4260,6 +4435,58 @@
         "lib/UiPath.Interop.dll",
         "uipath.19.7.7128.27029.nupkg.sha512",
         "uipath.nuspec"
+      ]
+    },
+    "UiPath.Citrix.Activities/1.0.0": {
+      "sha512": "QoqrHQM14xB1iUoBaG39FE2iMf2jJux8A2WX5+6VEzhZF0QobSV2OCbSbFSiupFBhGy2AmNobQxqGmzv/NL5GA==",
+      "type": "package",
+      "path": "uipath.citrix.activities/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net461/CookComputing.XmlRpcV2.dll",
+        "lib/net461/LICENSE.CookComputing.XmlRpcV2.txt",
+        "lib/net461/LICENSE.Newtonsoft.Json.txt",
+        "lib/net461/LICENSE.txt",
+        "lib/net461/Newtonsoft.Json.CH.dll",
+        "lib/net461/UiPath.Citrix.Activities.Design.dll",
+        "lib/net461/UiPath.Citrix.Activities.dll",
+        "lib/net461/UiPath.Citrix.dll",
+        "lib/net461/XenServer.dll",
+        "lib/net461/de/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/de/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/de/UiPath.Citrix.resources.dll",
+        "lib/net461/es-MX/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/es-MX/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/es-MX/UiPath.Citrix.resources.dll",
+        "lib/net461/es/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/es/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/es/UiPath.Citrix.resources.dll",
+        "lib/net461/fr/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/fr/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/fr/UiPath.Citrix.resources.dll",
+        "lib/net461/ja/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/ja/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/ja/UiPath.Citrix.resources.dll",
+        "lib/net461/ko/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/ko/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/ko/UiPath.Citrix.resources.dll",
+        "lib/net461/pt-BR/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/pt-BR/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/pt-BR/UiPath.Citrix.resources.dll",
+        "lib/net461/pt/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/pt/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/pt/UiPath.Citrix.resources.dll",
+        "lib/net461/ru/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/ru/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/ru/UiPath.Citrix.resources.dll",
+        "lib/net461/tr/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/tr/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/tr/UiPath.Citrix.resources.dll",
+        "lib/net461/zh-CN/UiPath.Citrix.Activities.Design.resources.dll",
+        "lib/net461/zh-CN/UiPath.Citrix.Activities.resources.dll",
+        "lib/net461/zh-CN/UiPath.Citrix.resources.dll",
+        "uipath.citrix.activities.1.0.0.nupkg.sha512",
+        "uipath.citrix.activities.nuspec"
       ]
     },
     "UiPath.Excel.Activities/2.6.2": {
@@ -4514,6 +4741,7 @@
       "Microsoft.Activities.Extensions >= 2.0.6.9 <= 2.0.6.9",
       "RBanda.TestReportGenerator.Activities >= 1.4.1 <= 1.4.1",
       "StopwatchTimer >= 1.0.1 <= 1.0.1",
+      "UiPath.Citrix.Activities >= 1.0.0 <= 1.0.0",
       "UiPath.Excel.Activities >= 2.6.2 <= 2.6.2",
       "UiPath.Mail.Activities >= 1.5.1 <= 1.5.1",
       "UiPath.System.Activities >= 19.7.0 <= 19.7.0",
@@ -4553,6 +4781,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[1.0.1, 1.0.1]"
+          },
+          "UiPath.Citrix.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.0, 1.0.0]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
