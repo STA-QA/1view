@@ -23,6 +23,8 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -47,6 +49,9 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="_1_31_1SOURCE_System_Integration___Make_New_Booking_and_Interface___Copy" sap:VirtualizedContainerService.HintSize="1033,4932" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -56,7 +61,7 @@
       <Variable x:TypeArguments="x:String" Default="1" Name="NoOfPassengers" />
       <Variable x:TypeArguments="x:Boolean" Name="CreateNewRecord" />
       <Variable x:TypeArguments="x:String" Name="FolderNumber" />
-      <Variable x:TypeArguments="x:String" Name="BookingReference" />
+      <Variable x:TypeArguments="x:String" Default="UEN9TK" Name="BookingReference" />
       <Variable x:TypeArguments="x:Boolean" Name="cond" />
       <Variable x:TypeArguments="x:String" Name="variable1" />
     </Flowchart.Variables>
@@ -134,7 +139,11 @@
                         <ui:CursorPosition OffsetX="615" OffsetY="626" Position="TopLeft" />
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="60c7ed058f121d529373c88a6aa00877" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Client Profile - \\Remote' /&gt;" WaitForReady="INTERACTIVE" />
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="60c7ed058f121d529373c88a6aa00877" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Client Profile - \\Remote' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
                   </Sequence>
@@ -210,10 +219,13 @@
                                             </ActivityFunc>
                                           </ui:GetOCRText.OCREngine>
                                           <ui:GetOCRText.Target>
-                                            <ui:Target Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7761cb5bd823f7e6c0962396e99b3875" WaitForReady="INTERACTIVE">
+                                            <ui:Target Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="7761cb5bd823f7e6c0962396e99b3875" WaitForReady="INTERACTIVE">
                                               <ui:Target.ClippingRegion>
                                                 <ui:Region Rectangle="17, 148, 115, 26" />
                                               </ui:Target.ClippingRegion>
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
                                             </ui:Target>
                                           </ui:GetOCRText.Target>
                                           <ui:GetOCRText.Text>
@@ -289,7 +301,11 @@
                                                         <ui:CursorPosition OffsetX="348" OffsetY="66" Position="TopLeft" />
                                                       </ui:Click.CursorPosition>
                                                       <ui:Click.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="057c68f13f6a16f99e7bcef8fbc716d5" WaitForReady="INTERACTIVE" />
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="057c68f13f6a16f99e7bcef8fbc716d5" WaitForReady="INTERACTIVE">
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                        </ui:Target>
                                                       </ui:Click.Target>
                                                     </ui:Click>
                                                   </Sequence>
@@ -314,7 +330,11 @@
                                                         <ui:CursorPosition OffsetX="40" OffsetY="72" Position="TopLeft" />
                                                       </ui:Click.CursorPosition>
                                                       <ui:Click.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="05adba0d5290fe55a2ee70bd8cb9ebdb" WaitForReady="INTERACTIVE" />
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="05adba0d5290fe55a2ee70bd8cb9ebdb" WaitForReady="INTERACTIVE">
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                        </ui:Target>
                                                       </ui:Click.Target>
                                                     </ui:Click>
                                                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Select'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -322,7 +342,11 @@
                                                         <ui:CursorPosition OffsetX="175" OffsetY="191" Position="TopLeft" />
                                                       </ui:Click.CursorPosition>
                                                       <ui:Click.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ed83d5f60c95b3620ba2d477aae004bf" WaitForReady="INTERACTIVE" />
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="ed83d5f60c95b3620ba2d477aae004bf" WaitForReady="INTERACTIVE">
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                        </ui:Target>
                                                       </ui:Click.Target>
                                                     </ui:Click>
                                                   </Sequence>
@@ -411,10 +435,14 @@
                                                                       </ui:CursorPosition>
                                                                     </ui:ClickImage.CursorPosition>
                                                                     <ui:ClickImage.Image>
-                                                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVFhH7ZY7dsIwEEXTZQlZBTugZhfOBtJScg41JSUNBW1arYE6ZXajeGyPrc8bzWCrylFxC9BjLF2Px7z9/O58YxtNYgWaxAo0iRVoEivQJFagKPF2df7jK+DaRevucY/XQ6Ys19g/DtFvGUuNkYM/nUvrne/CNUDnOBvz/vmdgXISosRMIBNsXMz0jNKWg0sH0Gv0uefR78H6wPnonZYZuPvTM742gyQSKIsQJPJdvfib+B1/ljeH66B1S40e2Hn5b+fujvJlkEQCZVNekJjAd547AaFlLDXcZRRSyiRoI0QCSSRQNsT+OKd3lQ+H4CxnpI4w1OB9SOMgh0dIqbtlkEQCZZniiyUf+svGSi8E7gCtI/Qaa4QYniIFJJFAWaIoMSQVoneI/aWi13hh7q14/FOQQAJliVyiMKfiA1vutpaxdcwsK9zPPAbqvFRCkDwCZRnQiUsH5UwHVv5ODKJLGTqgpYZyLTQm9O6WQfIIlA0RHmcgEnYCYhJdyAwHtNSY4a5lpBm5ZoaOIHkEyqaYZ+J/BskjUBbRJPZsEUg0iRVoEivQJFagSdzMzv8B8OrioYgs6LcAAAAASUVORK5CYII=" />
+                                                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVFhH7ZY7dsIwEEXTZQlZBTugZhfOBtJScg41JSUNBW1arYE6ZXajeGyPrc8bzWCrylFxC9BjLF2Px7z9/O58YxtNYgWaxAo0iRVoEivQJFagKPF2df7jK+DaRevucY/XQ6Ys19g/DtFvGUuNkYM/nUvrne/CNUDnOBvz/vmdgXISosRMIBNsXMz0jNKWg0sH0Gv0uefR78H6wPnonZYZuPvTM742gyQSKIsQJPJdvfib+B1/ljeH66B1S40e2Hn5b+fujvJlkEQCZVNekJjAd547AaFlLDXcZRRSyiRoI0QCSSRQNsT+OKd3lQ+H4CxnpI4w1OB9SOMgh0dIqbtlkEQCZZniiyUf+svGSi8E7gCtI/Qaa4QYniIFJJFAWaIoMSQVoneI/aWi13hh7q14/FOQQAJliVyiMKfiA1vutpaxdcwsK9zPPAbqvFRCkDwCZRnQiUsH5UwHVv5ODKJLGTqgpYZyLTQm9O6WQfIIlA0RHmcgEnYCYhJdyAwHtNSY4a5lpBm5ZoaOIHkEyqaYZ+J/BskjUBbRJPZsEUg0iRVoEivQJFagSdzMzv8B8OrioYgs6LcAAAAASUVORK5CYII=" />
                                                                     </ui:ClickImage.Image>
                                                                     <ui:ClickImage.Target>
-                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="INTERACTIVE">
+                                                                        <ui:Target.TimeoutMS>
+                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                        </ui:Target.TimeoutMS>
+                                                                      </ui:Target>
                                                                     </ui:ClickImage.Target>
                                                                   </ui:ClickImage>
                                                                 </Sequence>
@@ -465,10 +493,14 @@
                                                               </ui:CursorPosition>
                                                             </ui:ClickImage.CursorPosition>
                                                             <ui:ClickImage.Image>
-                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAATCAYAAAANgSQ9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVEhL7ZK9DYMwEIWzRTZimTSswQYMwAiUUDEBEi30UNO/YOFz/E8S2Yoj+aRX3PPx7sPy7f5okboyZChlyFDSIEd0OGoaJW9AvTFzRanMhtJ1fhzIasGsZPj0C0gGaGT4FA2SPCo6c/k8l2pbUBhZn0JaS1+og/HeuEk+L8D0/ltI3002K2sw98NrRvZ0SMt80e+Hs6OuWB8B8lwAdI30nQeS5m11ZiR6k6piQNKM6B3nIoP3zjcYBVL2qNQF5cRt8e7ox6hsWW9DpqkMGUp/ANniCb8Ho70cSeLjAAAAAElFTkSuQmCC" />
+                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAATCAYAAAANgSQ9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVEhL7ZK9DYMwEIWzRTZimTSswQYMwAiUUDEBEi30UNO/YOFz/E8S2Yoj+aRX3PPx7sPy7f5okboyZChlyFDSIEd0OGoaJW9AvTFzRanMhtJ1fhzIasGsZPj0C0gGaGT4FA2SPCo6c/k8l2pbUBhZn0JaS1+og/HeuEk+L8D0/ltI3002K2sw98NrRvZ0SMt80e+Hs6OuWB8B8lwAdI30nQeS5m11ZiR6k6piQNKM6B3nIoP3zjcYBVL2qNQF5cRt8e7ox6hsWW9DpqkMGUp/ANniCb8Ho70cSeLjAAAAAElFTkSuQmCC" />
                                                             </ui:ClickImage.Image>
                                                             <ui:ClickImage.Target>
-                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Home' /&gt;" WaitForReady="INTERACTIVE" />
+                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Home' /&gt;" WaitForReady="INTERACTIVE">
+                                                                <ui:Target.TimeoutMS>
+                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                </ui:Target.TimeoutMS>
+                                                              </ui:Target>
                                                             </ui:ClickImage.Target>
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -487,7 +519,11 @@
                                                               </sap:WorkflowViewStateService.ViewState>
                                                               <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Enter City or Country" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="LON">
                                                                 <ui:TypeInto.Target>
-                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7091b5860bd76882af80684795dea501" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_astLocation_astLocationtbx' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7091b5860bd76882af80684795dea501" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_astLocation_astLocationtbx' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                                                    <ui:Target.TimeoutMS>
+                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                    </ui:Target.TimeoutMS>
+                                                                  </ui:Target>
                                                                 </ui:TypeInto.Target>
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -506,7 +542,11 @@
                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                   <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Enter From Date" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="20OCT20">
                                                                     <ui:TypeInto.Target>
-                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b43f2033b5e00354bcd915151195b7c8" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl aaname='From' id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurat*' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b43f2033b5e00354bcd915151195b7c8" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl aaname='From' id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurat*' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                                                        <ui:Target.TimeoutMS>
+                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                        </ui:Target.TimeoutMS>
+                                                                      </ui:Target>
                                                                     </ui:TypeInto.Target>
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -579,7 +619,11 @@
                                                                           </scg:List>
                                                                         </ui:SelectItem.Items>
                                                                         <ui:SelectItem.Target>
-                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f87febb2c168f1646e133cda96aafa85" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurat*' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f87febb2c168f1646e133cda96aafa85" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurat*' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE">
+                                                                            <ui:Target.TimeoutMS>
+                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                            </ui:Target.TimeoutMS>
+                                                                          </ui:Target>
                                                                         </ui:SelectItem.Target>
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -608,7 +652,11 @@
                                                                               </ui:CursorPosition>
                                                                             </ui:Click.CursorPosition>
                                                                             <ui:Click.Target>
-                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0e97997cdc4ed114668fb6cc107a8dd4" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_btnSearchOptionsExpander' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0e97997cdc4ed114668fb6cc107a8dd4" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_btnSearchOptionsExpander' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                <ui:Target.TimeoutMS>
+                                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                                </ui:Target.TimeoutMS>
+                                                                              </ui:Target>
                                                                             </ui:Click.Target>
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -637,10 +685,14 @@
                                                                                   </ui:CursorPosition>
                                                                                 </ui:ClickImage.CursorPosition>
                                                                                 <ui:ClickImage.Image>
-                                                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAOCAYAAAB5EtGGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGLSURBVFhH7ZfRjcIwDIbZqUt0DKR7QeoMqA8sUR66BAipOwBLVMAIffXVbpK6Sf60IN1Jd/BLFUljJ/YXY8EqyzJa+ryLVuZzVh8oEaWhXKn62tDaPTWdzUpS9xNtl9rG9Iq/9gH+SSht21Ke59Q0TQLKAKS6mGmv23FH6/JENzOH+mtQLJCiKKjrOgwlujGD2tHhbqaTSlK2gS+wE+k13jtl20v2tuvq0l6F4gNh4Up50KHsD05Uxnm/oe3xIWOpov1Vxn5Q0M6c4RK71MN5IKngUhAIBIWTZwhWMSCs2UbLgbqb8avEn8eCWmqnhN4HAnshKJy8BYOAsGahaMlhNkEOaCzjCbRJUDN2sUoESVlx5Y17PQGFk7dgEBAWhMIV4sp8FAc0lLu6JV8BlCV2ShDKAHi2jwB/6SkWDALCwpXiBSDid+NXQfcK1w947AUF7fyeYv1AUkGyMo9UJ/D/od8pI5BBel2tBUEBO1FszTT5SGLSqK19WVNlof4elP+lz3+fiBZXyvuI6BsfuZUpjSOcBwAAAABJRU5ErkJggg==" />
+                                                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAOCAYAAAB5EtGGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGLSURBVFhH7ZfRjcIwDIbZqUt0DKR7QeoMqA8sUR66BAipOwBLVMAIffXVbpK6Sf60IN1Jd/BLFUljJ/YXY8EqyzJa+ryLVuZzVh8oEaWhXKn62tDaPTWdzUpS9xNtl9rG9Iq/9gH+SSht21Ke59Q0TQLKAKS6mGmv23FH6/JENzOH+mtQLJCiKKjrOgwlujGD2tHhbqaTSlK2gS+wE+k13jtl20v2tuvq0l6F4gNh4Up50KHsD05Uxnm/oe3xIWOpov1Vxn5Q0M6c4RK71MN5IKngUhAIBIWTZwhWMSCs2UbLgbqb8avEn8eCWmqnhN4HAnshKJy8BYOAsGahaMlhNkEOaCzjCbRJUDN2sUoESVlx5Y17PQGFk7dgEBAWhMIV4sp8FAc0lLu6JV8BlCV2ShDKAHi2jwB/6SkWDALCwpXiBSDid+NXQfcK1w947AUF7fyeYv1AUkGyMo9UJ/D/od8pI5BBel2tBUEBO1FszTT5SGLSqK19WVNlof4elP+lz3+fiBZXyvuI6BsfuZUpjSOcBwAAAABJRU5ErkJggg==" />
                                                                                 </ui:ClickImage.Image>
                                                                                 <ui:ClickImage.Target>
-                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                    <ui:Target.TimeoutMS>
+                                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                                    </ui:Target.TimeoutMS>
+                                                                                  </ui:Target>
                                                                                 </ui:ClickImage.Target>
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -669,10 +721,14 @@
                                                                                       </ui:CursorPosition>
                                                                                     </ui:ClickImage.CursorPosition>
                                                                                     <ui:ClickImage.Image>
-                                                                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAARCAYAAACmYE5yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEYSURBVEhL3ZbRDYMwDES7Ewsh9adLID5YAj5YAsQUwBbAGq4dAlyoVSKRStAnRYKQoPP5Qvugm3E/wVEUke+4At4O/5ngnvLni+J1lNSa+YmqFOdhpA0NZo3szagazc0hAQTPYvPO3jJDnYEgy9hQshYCdCXlRUlJPdmJ75wXrApRXFPXSQdkHa+HAtsCDJB98CyAw7bte0f3aIJBjCOSXV8dx2sm3KHjF28ZVTKpCJbooLC46Odr6dBaiPuucIIRI+4oEtqBXJ7rURHOC3ac2XBaLOwFQxwWcI+4rx3GAA5/fiV8Dp0R5OxhsHitS0ygSMyi/TMsLcd4LGCh+prfZDgEUqAStUv+lzA/PFqXGG+Hr8LNBBO9AQrZ0vRUS8rdAAAAAElFTkSuQmCC" />
+                                                                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAARCAYAAACmYE5yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEYSURBVEhL3ZbRDYMwDES7Ewsh9adLID5YAj5YAsQUwBbAGq4dAlyoVSKRStAnRYKQoPP5Qvugm3E/wVEUke+4At4O/5ngnvLni+J1lNSa+YmqFOdhpA0NZo3szagazc0hAQTPYvPO3jJDnYEgy9hQshYCdCXlRUlJPdmJ75wXrApRXFPXSQdkHa+HAtsCDJB98CyAw7bte0f3aIJBjCOSXV8dx2sm3KHjF28ZVTKpCJbooLC46Odr6dBaiPuucIIRI+4oEtqBXJ7rURHOC3ac2XBaLOwFQxwWcI+4rx3GAA5/fiV8Dp0R5OxhsHitS0ygSMyi/TMsLcd4LGCh+prfZDgEUqAStUv+lzA/PFqXGG+Hr8LNBBO9AQrZ0vRUS8rdAAAAAElFTkSuQmCC" />
                                                                                     </ui:ClickImage.Image>
                                                                                     <ui:ClickImage.Target>
-                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                        <ui:Target.TimeoutMS>
+                                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                                        </ui:Target.TimeoutMS>
+                                                                                      </ui:Target>
                                                                                     </ui:ClickImage.Target>
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -701,10 +757,14 @@
                                                                                           </ui:CursorPosition>
                                                                                         </ui:ClickImage.CursorPosition>
                                                                                         <ui:ClickImage.Image>
-                                                                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKEAAAAQCAYAAAB+xx9mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVGhD7ZfdjcIwDMdvJ5ZgDCReTmIGxANLwANLgJDYAVgCASPwmoubmNpO4ia0Ou4jP6kSiR1/JP+W9sNUKm+mirDydp4iHI1GxVelMgRMhCVUEVaGYngR3vZmPt2Yox8W8/L6u9kuPs3q5IeV/mfxTRSJ8HK5mPF4bA6HQxXhb+CviRAFOJvNzOPxyBMh/F7szXb9aSZTd3GRnM3Kz0+mS7O92Sm5nm5isKlk/WJjVkyENLZ2EAm/zto9jZ/L3a7XchPb2sZfRPoGtF5lzNPGz1Ob4t+nZmaDG9/Wv2vzz3d3Vk8zRqJ1ZopQChDIFiEtBIqwB3ttBuLJhbZgPWlajI9WICy2zYXxqO26W9oDPze/JUEMrE+tneD9qEDTuV3PzBa7+QClVx4TBNL6MZuMiXTULHtN21w/PJ8cY/50nUyE8DcLYgPRITEBAvkiJJug2ZDc9aIpLmqw+cNtkL6InCfr1NyEYF7L/Wq+rpjURiiqWY4xpmbzT8JnbjmWcaithYkQRAZiQyGmBAgMIsLkkyVzPbVZ4I5tRYiPfbwiGxDEIJuo5aYE80pu8GU95+br6KfxTc1n1Bz4KXUxoUnRybEQXqLO4O+YCjElQODnPwkjsQOkH9k0NTchmNdyv5pPiykIXiki6zprJnWptkIRUkid0XdCFGJKgEBvETLRWNDGfHgT7h2qjRe8q9g7DONp7ziUpJ9aOyEyr+WmNvZOWNorxpS9aT0gPWrmtgIRKnVmfZjE6C9CAIoUj2fh4w7D+cx3e+tP1zshN3b165hujIT6KbUGtXui81puYlvbmgPhOVvYazomiATXhV+vcs7SWXOurUCEllSdw4uwUgA/pP8KE2HpVelLFSHwFGGl8h6M+QJIJfyqO7qF2QAAAABJRU5ErkJggg==" />
+                                                                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKEAAAAQCAYAAAB+xx9mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVGhD7ZfdjcIwDMdvJ5ZgDCReTmIGxANLwANLgJDYAVgCASPwmoubmNpO4ia0Ou4jP6kSiR1/JP+W9sNUKm+mirDydp4iHI1GxVelMgRMhCVUEVaGYngR3vZmPt2Yox8W8/L6u9kuPs3q5IeV/mfxTRSJ8HK5mPF4bA6HQxXhb+CviRAFOJvNzOPxyBMh/F7szXb9aSZTd3GRnM3Kz0+mS7O92Sm5nm5isKlk/WJjVkyENLZ2EAm/zto9jZ/L3a7XchPb2sZfRPoGtF5lzNPGz1Ob4t+nZmaDG9/Wv2vzz3d3Vk8zRqJ1ZopQChDIFiEtBIqwB3ttBuLJhbZgPWlajI9WICy2zYXxqO26W9oDPze/JUEMrE+tneD9qEDTuV3PzBa7+QClVx4TBNL6MZuMiXTULHtN21w/PJ8cY/50nUyE8DcLYgPRITEBAvkiJJug2ZDc9aIpLmqw+cNtkL6InCfr1NyEYF7L/Wq+rpjURiiqWY4xpmbzT8JnbjmWcaithYkQRAZiQyGmBAgMIsLkkyVzPbVZ4I5tRYiPfbwiGxDEIJuo5aYE80pu8GU95+br6KfxTc1n1Bz4KXUxoUnRybEQXqLO4O+YCjElQODnPwkjsQOkH9k0NTchmNdyv5pPiykIXiki6zprJnWptkIRUkid0XdCFGJKgEBvETLRWNDGfHgT7h2qjRe8q9g7DONp7ziUpJ9aOyEyr+WmNvZOWNorxpS9aT0gPWrmtgIRKnVmfZjE6C9CAIoUj2fh4w7D+cx3e+tP1zshN3b165hujIT6KbUGtXui81puYlvbmgPhOVvYazomiATXhV+vcs7SWXOurUCEllSdw4uwUgA/pP8KE2HpVelLFSHwFGGl8h6M+QJIJfyqO7qF2QAAAABJRU5ErkJggg==" />
                                                                                         </ui:ClickImage.Image>
                                                                                         <ui:ClickImage.Target>
-                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                            <ui:Target.TimeoutMS>
+                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                            </ui:Target.TimeoutMS>
+                                                                                          </ui:Target>
                                                                                         </ui:ClickImage.Target>
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -723,7 +783,11 @@
                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                           <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="CLick &quot;Page Down&quot;" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                                                                                             <ui:SendHotkey.Target>
-                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="INTERACTIVE">
+                                                                                                <ui:Target.TimeoutMS>
+                                                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                                                </ui:Target.TimeoutMS>
+                                                                                              </ui:Target>
                                                                                             </ui:SendHotkey.Target>
                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -752,10 +816,14 @@
                                                                                                   </ui:CursorPosition>
                                                                                                 </ui:ClickImage.CursorPosition>
                                                                                                 <ui:ClickImage.Image>
-                                                                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAdCAYAAADIKWCvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVGhD7ZoxjgIxDEW5IafYs3ACDkJFxRUQ3AAaGhpER5WFYex4nO9MMiwBaf2kL60Gm2S+HWcLZsFpjpv+Adz0D9CZPvvZuN4syQwFuN4jwk1vKMJNbyjCTW8owk1vKKLe9OU5nPpk5nIOcxT7RVocP79Xosr0+e7WpyGuYQFyvkP7sLo8d3na7cHnZUKgOEtEhemHsO2TwvEQn8vOl8+/SWKP2zX4vFAWKBaJmGS63jifAHV0k5OBigLGle7Gwfevr8+/+WTFLiaSbpY5ar3azrdAsVpEhenDl8tvNjWCkcazGSmysDyPBd366H7pkftD+ZFbWC3jWiWyQLFSRN1Fil4SXEyw8zmXXlIUhguBZq8YawODxHOxTnphDhuAi8kFrzf9IQsUSyLqTCeBDo0mZbq8Q72k0e38faLQg7FWaprIl90fR9/0fwAsUOxDxDTTWbIL+81njvyT3qTMaJFGWubA04TE6wzz+US8cPlboNiHiCLTs12RdJx94UbJ0xC/E61jmZOOESwcF/cou79GFiiWRJR1uuhKvcnsDGWjxInono3MbpCn10UFSp+hde5K7pc6WaBYKaJwvIzNaWveKkS3cbEQZHrWHFEkBRts5GdP7ogsUKwWUTfToZnGxvVsT8aAMu1utB4l4+Zo41Vx/nieW6BYJOLFi/R/CYHiLBFuekMRbnpDEW56QxFuekMRbnpDEf67l0aS+C+8mhPCL+DpQtimsJVDAAAAAElFTkSuQmCC" />
+                                                                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAdCAYAAADIKWCvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVGhD7ZoxjgIxDEW5IafYs3ACDkJFxRUQ3AAaGhpER5WFYex4nO9MMiwBaf2kL60Gm2S+HWcLZsFpjpv+Adz0D9CZPvvZuN4syQwFuN4jwk1vKMJNbyjCTW8owk1vKKLe9OU5nPpk5nIOcxT7RVocP79Xosr0+e7WpyGuYQFyvkP7sLo8d3na7cHnZUKgOEtEhemHsO2TwvEQn8vOl8+/SWKP2zX4vFAWKBaJmGS63jifAHV0k5OBigLGle7Gwfevr8+/+WTFLiaSbpY5ar3azrdAsVpEhenDl8tvNjWCkcazGSmysDyPBd366H7pkftD+ZFbWC3jWiWyQLFSRN1Fil4SXEyw8zmXXlIUhguBZq8YawODxHOxTnphDhuAi8kFrzf9IQsUSyLqTCeBDo0mZbq8Q72k0e38faLQg7FWaprIl90fR9/0fwAsUOxDxDTTWbIL+81njvyT3qTMaJFGWubA04TE6wzz+US8cPlboNiHiCLTs12RdJx94UbJ0xC/E61jmZOOESwcF/cou79GFiiWRJR1uuhKvcnsDGWjxInono3MbpCn10UFSp+hde5K7pc6WaBYKaJwvIzNaWveKkS3cbEQZHrWHFEkBRts5GdP7ogsUKwWUTfToZnGxvVsT8aAMu1utB4l4+Zo41Vx/nieW6BYJOLFi/R/CYHiLBFuekMRbnpDEW56QxFuekMRbnpDEf67l0aS+C+8mhPCL+DpQtimsJVDAAAAAElFTkSuQmCC" />
                                                                                                 </ui:ClickImage.Image>
                                                                                                 <ui:ClickImage.Target>
-                                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                    <ui:Target.TimeoutMS>
+                                                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                                                    </ui:Target.TimeoutMS>
+                                                                                                  </ui:Target>
                                                                                                 </ui:ClickImage.Target>
                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -790,7 +858,11 @@
                                                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                                                       <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="CLick &quot;Page Down&quot;" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="pgdn" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                                                                                                         <ui:SendHotkey.Target>
-                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="INTERACTIVE">
+                                                                                                            <ui:Target.TimeoutMS>
+                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                            </ui:Target.TimeoutMS>
+                                                                                                          </ui:Target>
                                                                                                         </ui:SendHotkey.Target>
                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -819,10 +891,14 @@
                                                                                                               </ui:CursorPosition>
                                                                                                             </ui:ClickImage.CursorPosition>
                                                                                                             <ui:ClickImage.Image>
-                                                                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAZCAYAAACCXybJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHASURBVFhH7ZYxcsIwEEXpcoScghu45hbOBdJSMkPtkpKGgjatz0CdMrfZ+MuStSt/mYTEnrFNZt4QLSvPPslCu5EV/jnpz6/tqtiw4NIh0qWU77W8nsoudj41Y8Q8ZT0cN8/RuGfu5HCMMTtnGnrS9fUixamS4riX2sVQ5EUON59TV02xlZyzcT/2YGGiWCtcXHftODNnbBJp7A6KCJ86NpTD8kCyMLe9FL056vuJMNJul90uKAEU2u26H+O7XDyMHclCYGfvzhkfJY0C1fkLO4BCu/OtXs9cvHtew+DCZOZMQCeNs6cLCGcRux8XosGL5uIGszAtZh6b8wte3j56sLyU3g/ZnGDSgOVqZi0NmDRguYHZSwMmDVguWIQ0YNKA5S5GGjBpkOY9pcPdGa4Ue4f6e1xdM2nv3TYe6X3f8Mer6ScwWcByjbSTCAW6RiK2iHd7cicbx7bnHhcmC1guiNKDLWFoJ8OnjvmcXrc1TU/NZAHLDUTptC9WZHty/QqbucmCjASTBSxXk+y0fZ3bVx0CSo715PhfzXXPyizgf/KIMDBn2vTFvuihnjyNm0WY4MfrUYz0WnhKr4UVSm/lG7F0oIFpJvI1AAAAAElFTkSuQmCC" />
+                                                                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAZCAYAAACCXybJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHASURBVFhH7ZYxcsIwEEXpcoScghu45hbOBdJSMkPtkpKGgjatz0CdMrfZ+MuStSt/mYTEnrFNZt4QLSvPPslCu5EV/jnpz6/tqtiw4NIh0qWU77W8nsoudj41Y8Q8ZT0cN8/RuGfu5HCMMTtnGnrS9fUixamS4riX2sVQ5EUON59TV02xlZyzcT/2YGGiWCtcXHftODNnbBJp7A6KCJ86NpTD8kCyMLe9FL056vuJMNJul90uKAEU2u26H+O7XDyMHclCYGfvzhkfJY0C1fkLO4BCu/OtXs9cvHtew+DCZOZMQCeNs6cLCGcRux8XosGL5uIGszAtZh6b8wte3j56sLyU3g/ZnGDSgOVqZi0NmDRguYHZSwMmDVguWIQ0YNKA5S5GGjBpkOY9pcPdGa4Ue4f6e1xdM2nv3TYe6X3f8Mer6ScwWcByjbSTCAW6RiK2iHd7cicbx7bnHhcmC1guiNKDLWFoJ8OnjvmcXrc1TU/NZAHLDUTptC9WZHty/QqbucmCjASTBSxXk+y0fZ3bVx0CSo715PhfzXXPyizgf/KIMDBn2vTFvuihnjyNm0WY4MfrUYz0WnhKr4UVSm/lG7F0oIFpJvI1AAAAAElFTkSuQmCC" />
                                                                                                             </ui:ClickImage.Image>
                                                                                                             <ui:ClickImage.Target>
-                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                <ui:Target.TimeoutMS>
+                                                                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                </ui:Target.TimeoutMS>
+                                                                                                              </ui:Target>
                                                                                                             </ui:ClickImage.Target>
                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -867,10 +943,14 @@
                                                                                                                       </ui:CursorPosition>
                                                                                                                     </ui:ClickImage.CursorPosition>
                                                                                                                     <ui:ClickImage.Image>
-                                                                                                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAVCAYAAADvoQY8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVFhH7VZBqsIwEO2dXHgA0XN87Mal7qqg7nXhX3gEBU+gYHuHegahCwUvIOj7vjStaTutinxoxYFH2sxkOi+TydQKggBVx5dEWfB5JFzXRbfbRavVQr1eVyPfOW/alQ2KxH6/x3A4hG3b2Gw2OBwOOJ/PauQ756mnXdpBGaBI9Pt9TCYTXK9XSML56XSq7NIOYvgrOHYHPynMXMH2JeywGIyx8CVdCMvzPLTbbR1usdCO9pKjkMQc28xccQCP8QSJXq+H9XqtwywW2rFGJEciiUwAHmZxltK2eTrTB59v+sEKvrHWajQaOJ1OOsxiOR6PaDab8eIE8jJhfHD724Gz3IU6d54IJl93J5GwMWDVajUd4mNhsfPWSjtRUCSinTQQB8OdNknyPdrhIl1IwrllQCJA/G8mdPpVcWf0xjEp0mkfznKFWeoYRbB4xnmNPiO0e60mwiMQ3lDvZYLP/vKWEek4sZGxD1wuFx2qLNTTLrfxiSTMYN6vieTzHapPjEYj1Qce9QnamYsTUCSyNZHsEyQV6STCki4VuLBZYsfm2WcRc6xMx44Q/TuxeHkLcazMv1PV8SVRFnwAiQB/Ycgj5kGAADQAAAAASUVORK5CYII=" />
+                                                                                                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAVCAYAAADvoQY8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVFhH7VZBqsIwEO2dXHgA0XN87Mal7qqg7nXhX3gEBU+gYHuHegahCwUvIOj7vjStaTutinxoxYFH2sxkOi+TydQKggBVx5dEWfB5JFzXRbfbRavVQr1eVyPfOW/alQ2KxH6/x3A4hG3b2Gw2OBwOOJ/PauQ756mnXdpBGaBI9Pt9TCYTXK9XSML56XSq7NIOYvgrOHYHPynMXMH2JeywGIyx8CVdCMvzPLTbbR1usdCO9pKjkMQc28xccQCP8QSJXq+H9XqtwywW2rFGJEciiUwAHmZxltK2eTrTB59v+sEKvrHWajQaOJ1OOsxiOR6PaDab8eIE8jJhfHD724Gz3IU6d54IJl93J5GwMWDVajUd4mNhsfPWSjtRUCSinTQQB8OdNknyPdrhIl1IwrllQCJA/G8mdPpVcWf0xjEp0mkfznKFWeoYRbB4xnmNPiO0e60mwiMQ3lDvZYLP/vKWEek4sZGxD1wuFx2qLNTTLrfxiSTMYN6vieTzHapPjEYj1Qce9QnamYsTUCSyNZHsEyQV6STCki4VuLBZYsfm2WcRc6xMx44Q/TuxeHkLcazMv1PV8SVRFnwAiQB/Ycgj5kGAADQAAAAASUVORK5CYII=" />
                                                                                                                     </ui:ClickImage.Image>
                                                                                                                     <ui:ClickImage.Target>
-                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                        <ui:Target.TimeoutMS>
+                                                                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                        </ui:Target.TimeoutMS>
+                                                                                                                      </ui:Target>
                                                                                                                     </ui:ClickImage.Target>
                                                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -915,10 +995,14 @@
                                                                                                                               </ui:CursorPosition>
                                                                                                                             </ui:ClickImage.CursorPosition>
                                                                                                                             <ui:ClickImage.Image>
-                                                                                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAVCAYAAAANUd8AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPJSURBVGhD7ZhBUhtBDEVzQ06Rs3ACDsKKFVeg4AawYcOGYsdqMuOZ6f6SntozOBXbqVbVr0rk7pb09SU7+fXr9+PQ0fFfAJ0dHdcIdHZ0XCPQ2dFxjUBnR8c1Ap2Il+H+c3D2Ndzi2cvC7duS7ufHcAOftzHW/fwK/v04LY/TsCn23cfwvhx7eoDPLx3odLh5/l5KZLvswusQvj+/wOcNLM3dfQ9xQh4nY2Psh6/50BmXFBmdQ6BTYIRsplo39QVv6B9vm9fh6Uf3Epxz613Rxs2Mzgags6A2dHiDr9qEpLjJSewqFh2Muj3SQdINUv482fdwf6cx3Nnit/Ema+c/mtRfvrIX27RpJY97ff8Ir6uxCGMd+J7nADmD7W3uiRZGizXbz+d+1Tf3DFFmdNYAnQtqU0EkCCC3mHsDGlbte3iHd1DkwezghN+Kjbgz4VzDHNs1TOyYoP0AqOndVm0mRos/97vYcKBCVuHDYmrzLP1s9nKyrfqpyIzOFqBzQSGBph2gxddJFHHIO4ao1a9El4ZUAc3NVLEJSXKXYvu7KCARAdWOfJjttfgCJOcSA3wqCuRqjaEcSFwQpKn5s3JuBmNCqENjyPkQg3Oxg9DiJkdmdPYAdB4gJPjCEVKUNntEUyziq4Ty1M/keXEv58RfGunvqljIQGg1Rr6VZ2s0rMS1G8rzEkWb3A+crIC8qWblfEHsh9SLw7s9F6+HPciMzv5FMYOYFkQxsyBJ4KHBiTAwvts29a3E1rgUo7yVWUPMYevN8Lzg5p/g80new55h3p671j17NvRyTy4/QGZ0dtvPDBFXhRPknglFQXLxIYeEZPLndxvCm0Dn0iE6DubR8wI8LfADHQZ8BfSgxB5t8q1/NwKDe0G0B8Qc9+SyF5nR2QPQuaI01U+XfAWVIqRQIaCSWUWABKBY4gbX5tSmSz4lNgwHESw1thsZc9H3LD8K4WW0EGO06BMOqAcYdxsHWFsY3ihaH6PFn8nFi3wjMqOzBegssI2I5raUFOZNm10EqUQFQkcEgR/L59hwuGEQw/wWC0Lw5japgeRB/0OTiSWYGay8DlMvcQC+2A8Q7YTSI+W0kfNkLu8tyIzOGqDTgZqozTcIgrZi0uKPCbzGXUVqSbZ5uQ1Aw7HA1xNqKQ2fzOXv62sJecJ6/tBU23jmMIoj4zoI2gsHOfDbOm7ves/WXnjzcQxfU2/gzY3IjM4GoPNSkZDccS7Y5VL8J/SJjM4h0HmhSDdDx9mQ/9wZ7V/3CZ0XCvop0nFuJP+OOUeP0NnRcXV4HP4AuEexqRaNrmYAAAAASUVORK5CYII=" />
+                                                                                                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAVCAYAAAANUd8AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPJSURBVGhD7ZhBUhtBDEVzQ06Rs3ACDsKKFVeg4AawYcOGYsdqMuOZ6f6SntozOBXbqVbVr0rk7pb09SU7+fXr9+PQ0fFfAJ0dHdcIdHZ0XCPQ2dFxjUBnR8c1Ap2Il+H+c3D2Ndzi2cvC7duS7ufHcAOftzHW/fwK/v04LY/TsCn23cfwvhx7eoDPLx3odLh5/l5KZLvswusQvj+/wOcNLM3dfQ9xQh4nY2Psh6/50BmXFBmdQ6BTYIRsplo39QVv6B9vm9fh6Uf3Epxz613Rxs2Mzgags6A2dHiDr9qEpLjJSewqFh2Muj3SQdINUv482fdwf6cx3Nnit/Ema+c/mtRfvrIX27RpJY97ff8Ir6uxCGMd+J7nADmD7W3uiRZGizXbz+d+1Tf3DFFmdNYAnQtqU0EkCCC3mHsDGlbte3iHd1DkwezghN+Kjbgz4VzDHNs1TOyYoP0AqOndVm0mRos/97vYcKBCVuHDYmrzLP1s9nKyrfqpyIzOFqBzQSGBph2gxddJFHHIO4ao1a9El4ZUAc3NVLEJSXKXYvu7KCARAdWOfJjttfgCJOcSA3wqCuRqjaEcSFwQpKn5s3JuBmNCqENjyPkQg3Oxg9DiJkdmdPYAdB4gJPjCEVKUNntEUyziq4Ty1M/keXEv58RfGunvqljIQGg1Rr6VZ2s0rMS1G8rzEkWb3A+crIC8qWblfEHsh9SLw7s9F6+HPciMzv5FMYOYFkQxsyBJ4KHBiTAwvts29a3E1rgUo7yVWUPMYevN8Lzg5p/g80new55h3p671j17NvRyTy4/QGZ0dtvPDBFXhRPknglFQXLxIYeEZPLndxvCm0Dn0iE6DubR8wI8LfADHQZ8BfSgxB5t8q1/NwKDe0G0B8Qc9+SyF5nR2QPQuaI01U+XfAWVIqRQIaCSWUWABKBY4gbX5tSmSz4lNgwHESw1thsZc9H3LD8K4WW0EGO06BMOqAcYdxsHWFsY3ihaH6PFn8nFi3wjMqOzBegssI2I5raUFOZNm10EqUQFQkcEgR/L59hwuGEQw/wWC0Lw5japgeRB/0OTiSWYGay8DlMvcQC+2A8Q7YTSI+W0kfNkLu8tyIzOGqDTgZqozTcIgrZi0uKPCbzGXUVqSbZ5uQ1Aw7HA1xNqKQ2fzOXv62sJecJ6/tBU23jmMIoj4zoI2gsHOfDbOm7ves/WXnjzcQxfU2/gzY3IjM4GoPNSkZDccS7Y5VL8J/SJjM4h0HmhSDdDx9mQ/9wZ7V/3CZ0XCvop0nFuJP+OOUeP0NnRcXV4HP4AuEexqRaNrmYAAAAASUVORK5CYII=" />
                                                                                                                             </ui:ClickImage.Image>
                                                                                                                             <ui:ClickImage.Target>
-                                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                                <ui:Target.TimeoutMS>
+                                                                                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                </ui:Target.TimeoutMS>
+                                                                                                                              </ui:Target>
                                                                                                                             </ui:ClickImage.Target>
                                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -947,10 +1031,14 @@
                                                                                                                                   </ui:CursorPosition>
                                                                                                                                 </ui:ClickImage.CursorPosition>
                                                                                                                                 <ui:ClickImage.Image>
-                                                                                                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAkEAAAAQCAYAAAARSavWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAe1SURBVHhe7Zu9bhw5DIDzEn6jPMgBaQIEcH1NkCJA3iCAXRh+B/sSwMUB6bNJeylSOunzBHOiRGkoDsmRtDv2rs0PGGBGEn9nRuTu2i8mx3Ecx3GcZ4g3QY7jOI7jPEuqJujF3/91H47jOI7jOKfIognqwZsgx3Ecx3FOlW2aoF+fprevrqaveFnQxk+S39PNu9fTxQ4vN2UDW5vci61z8pA576TlmX8qz/9ITCedB/LcaXGcXEzA2vv0Z/r44Z/p7I1wfPgx/cRVp87dNcS0m+7w+iGpbH/fxdyef49T4fb8mF5e36dzPveIJJ/TUfmDPr78/AcHDgDkQNN5oJx4EzTMQxbkDWxtci+2zslD5ryTlmf+qTz/IzGddOzKc3fy97PjfTqiInxojqYJqrifzkO+z3ITdDSgX1IT/NBN0IF4lCbo4vL19NerdFQvYJxnczD27lNIfQZe3PfTzS84/zZdlPXKZhTlg83wss9rDDnJhwKRQ53mBoLxFv30GuO60XJh2lL8l2LdXeE6ulaSN3LSOmflRMvrXnkgaPoj1P/87AAt4zReGL+abm7fMxlrPRmPPoYYWmKt9HDoOuL3IXLckgeMI17Tc0D0Qc6DmiccXfebMhDDyHNXfN8oJvF9FYj2BB2jca0hNUFYoGD87M2X6eNvHC+F8gvOh7l/sUBe72aZUEjvPn9B+brQ/STjcGjNF19XdOTiSezJ+nfTudUEVTHWOtT4R22XHLNv4KDh4Pnf23Y61KZW1M+/GWQ5y02QYlv1GViLB/WkphHnaU6a4w7PZIxh9v0RmqDX09tbjBBe+PDCpgYHXk6+oYMO2vTgOMp8DS961nUPhenyWzyvQJv0RdflNB8SVC5vVuYGwuSra/RLzoVtS/V/ESvEM9tfrjVis3xp9HPGyOseeZix7hv7tFv0a+NGfqMdKB7oX/SHxjHnszAYq/o8q36P5nggDwvdOe41HyQZ4R5n3+I6PV8zbTH06F7IhbVR/6YxQf5mHfozMHqvjbjWUIpwXZxyYcEmiBZJlM/fIJSihN90VPJW4aPEdfO4pCPZy8Vb0i/4WmDfxlQ5qOdSPOjLqG1D/+FtG3m19Oc5vI8Vyj1e9bkhnugznpdnkOakOW60Re734/4cpq2LzBsCbAb5xZ3P2UbANpDCwkajXITO8XVs45Ww4jVzYdky/F+NlWDao3I9cw05iRC54TxYGPoz2ngVH0B9gHNqH/zBtS12+Jrq2rJLUP3mEHnLrqrP8KdJHmiR4XESu1y3Zkv1YVQ3lyPPHV2nne9ll+a8FWJvVT+Za36fAlUR5kUsYBVwAOdzATb15YJGCpUJ6kqHUDwDtEHivlfNE4X5SFnET+2N2rZySOZGbec5MVaCqT/7ZTRB2TaVs3S2xXMfG5uiG6D5qnzsu99H1wTBJxX4dJIOnIN18dMMKTrxhaZr4RA2kIWNdTnVB8FXcwOx4u2ZC8y2DP8FuTTG1pVxzZ5V3O3Cb+WkKa+mX4P6ySfhgjZuPh8wR3IYKP4IvkaseKrrjudZ9DsxlOPePHB5qjuw6oMpbzxfgq0IjGv3eES3YEe8zy3nkY6Y4jXLt8LQvaZzgRLXGqwhSIUFikl9pCK0ZxME4Px8CIUbC1+eS8UNdXQUxXS91J9jzD5SFv7SmEdtVznpaIIabUca8mrqz+dGEzTna5azdLbEI/pL7e1xv4+oCUqbbnkhqzncRHZhrGx2sF6wwVn4YslZPnA58GllA7HiteZMW4b/XCdn8bW8Zg+u8wbcM6flBNYpeR3OA6VDf0YbX9ikwBwtTPhcSsUtY/lSXVt2CabfAzk29UnjAVW+0YeFTD4H4FrJKb/OaOPDurkcee7oOu38EDEB7KesGdA3cK+tuNZgBW5ZuCi0aCIo39wEEdIcLa4JLlMV/I6iuGgUMouiPrPwl9obtV3ZYzkkc6O2OUnPel5rnejXA38TFO1x/TRflY999/t4miBxbi448ffx8OKX37MD8ClG++27IPiiyq34sJCjG5EI2fwCKQYr3vnastXsP8+JsdbKZdeclBMx1raisLd+vtGXtdq4FW8qPuXvNOgc9yFDx/kadm3leUbxW9TdkuOBPFB57RyI14IPbF2THYBfF/aMAVjzKT93dJ12HhiyS9cB/Doj6jjg+yRRFegAKzp1odmzCVpZm0kyeRxtZh1GUaznspzUKLA4qBye57nK/1HbVZzMNp0btd2YV1N/9stogvKc5Jfl82g8NCfdOQ8c1c9hudGJB//Phbg2F7YMFqV48DlE9EWXM33AzXYxp8UboPre3n6aP4mt5EK1FVH8F/yATS/bLw1YJOvPY1RnrcOes/ycUfO6Vx5m7Pum3e+R8ffTxWW2Red4PjNkfDVWzS5HXjee4848UHmmS78PRh4qO2R81W9KSww9upXnrlp3+Jj097Vm6/dpgVQwc9HDY55jBRzAtVoBrgttgOkuchX1fyudXxOdVlEMJHtprOe/w6qYqjni+6htlpMkh/NsbtR2W14Dmv6GJmjL/w6rrmlO2Lqe+71NE/QM+Xqpb1jOUwEKm9WcOI7jOMdMbJBIE7dognoPBwifrm6lf2V1nhbeBDnPi/Tp2Q8/nuYBVE2Q4ziO4zjO82Ca/gcithnrhjm2wwAAAABJRU5ErkJggg==" />
+                                                                                                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                                                                                                                                 </ui:ClickImage.Image>
                                                                                                                                 <ui:ClickImage.Target>
-                                                                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Travel Folder - Book' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Travel Folder - Book' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                                    <ui:Target.TimeoutMS>
+                                                                                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                    </ui:Target.TimeoutMS>
+                                                                                                                                  </ui:Target>
                                                                                                                                 </ui:ClickImage.Target>
                                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -995,10 +1083,14 @@
                                                                                                                                           </ui:CursorPosition>
                                                                                                                                         </ui:ClickImage.CursorPosition>
                                                                                                                                         <ui:ClickImage.Image>
-                                                                                                                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAWCAYAAAB9oOpzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVFhH7ZU9jsJADIW5IafgLJyAg1BRcQUEN4AmDQ2io5rdZCce/7wXZqOglVbzpK+IY5Lxi21Wq80xNQAw2GjGUGCw0YyhwODmkvaPRHU6oN8szTWd8vu68wXc/zAwuLunLh+K6ePmyBleab8D9ytAQnkQGDw882P8ocpXTLerii/P+vzKL3qmLbhfAxPKDaDg9pafEA6lRswZUwoZRQoC3Yi6T86Q31PO9K3HPa1dPoMJ5RpikBePO2lqH9mOi+YV2T1i94s2Zc4IM6FcIQTe7hdebDk0MFc/VxkOR0btl05Mn79rephQ7kAISFdwla9bMVq57aEBPWDJos5a4p+JCeUGY6Rt0RyHUSot71vcG+N3hgCMMftk1C/2CoMJ5TpjJvbLgDNCjYc1xj+norOkk9Q/3xAbr/9ylGihP5QvORahClZftOSh8VAFqrGVUQkdVN4xd5yYUK5gLir2Sy9zwInf2EJ0JzgpU/0IslgtTCjXoC/gbBuRdg7msLaP5vgugLsI7KEamFBuAAb/CUgoDwKDjWYMBQYbzRjMMX0BXZYdSi2o1OEAAAAASUVORK5CYII=" />
+                                                                                                                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAWCAYAAAB9oOpzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVFhH7ZU9jsJADIW5IafgLJyAg1BRcQUEN4AmDQ2io5rdZCce/7wXZqOglVbzpK+IY5Lxi21Wq80xNQAw2GjGUGCw0YyhwODmkvaPRHU6oN8szTWd8vu68wXc/zAwuLunLh+K6ePmyBleab8D9ytAQnkQGDw882P8ocpXTLerii/P+vzKL3qmLbhfAxPKDaDg9pafEA6lRswZUwoZRQoC3Yi6T86Q31PO9K3HPa1dPoMJ5RpikBePO2lqH9mOi+YV2T1i94s2Zc4IM6FcIQTe7hdebDk0MFc/VxkOR0btl05Mn79rephQ7kAISFdwla9bMVq57aEBPWDJos5a4p+JCeUGY6Rt0RyHUSot71vcG+N3hgCMMftk1C/2CoMJ5TpjJvbLgDNCjYc1xj+norOkk9Q/3xAbr/9ylGihP5QvORahClZftOSh8VAFqrGVUQkdVN4xd5yYUK5gLir2Sy9zwInf2EJ0JzgpU/0IslgtTCjXoC/gbBuRdg7msLaP5vgugLsI7KEamFBuAAb/CUgoDwKDjWYMBQYbzRjMMX0BXZYdSi2o1OEAAAAASUVORK5CYII=" />
                                                                                                                                         </ui:ClickImage.Image>
                                                                                                                                         <ui:ClickImage.Target>
-                                                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Travel Folder - Book' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Travel Folder - Book' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                                            <ui:Target.TimeoutMS>
+                                                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                            </ui:Target.TimeoutMS>
+                                                                                                                                          </ui:Target>
                                                                                                                                         </ui:ClickImage.Target>
                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1021,11 +1113,26 @@
                                                                                                                                                 <ActivityFunc.Argument>
                                                                                                                                                   <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                                                                                                                 </ActivityFunc.Argument>
-                                                                                                                                                <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+                                                                                                                                                <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2">
+                                                                                                                                                  <ui:GoogleOCR.AllowedCharacters>
+                                                                                                                                                    <InArgument x:TypeArguments="x:String">
+                                                                                                                                                      <Literal x:TypeArguments="x:String" Value="" />
+                                                                                                                                                    </InArgument>
+                                                                                                                                                  </ui:GoogleOCR.AllowedCharacters>
+                                                                                                                                                  <ui:GoogleOCR.DeniedCharacters>
+                                                                                                                                                    <InArgument x:TypeArguments="x:String">
+                                                                                                                                                      <Literal x:TypeArguments="x:String" Value="" />
+                                                                                                                                                    </InArgument>
+                                                                                                                                                  </ui:GoogleOCR.DeniedCharacters>
+                                                                                                                                                </ui:GoogleOCR>
                                                                                                                                               </ActivityFunc>
                                                                                                                                             </ui:GetOCRText.OCREngine>
                                                                                                                                             <ui:GetOCRText.Target>
-                                                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3d4052ab6bbc61e46502686e33724943" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Travel Folder - Confirmation' /&gt;&lt;webctrl idx='1' tag='H4' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3d4052ab6bbc61e46502686e33724943" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Travel Folder - Confirmation' /&gt;&lt;webctrl idx='1' tag='H4' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                                                <ui:Target.TimeoutMS>
+                                                                                                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                </ui:Target.TimeoutMS>
+                                                                                                                                              </ui:Target>
                                                                                                                                             </ui:GetOCRText.Target>
                                                                                                                                             <ui:GetOCRText.Text>
                                                                                                                                               <OutArgument x:TypeArguments="x:String">[BookingReference]</OutArgument>
@@ -1050,7 +1157,7 @@
                                                                                                                                                   <OutArgument x:TypeArguments="x:String">[BookingReference]</OutArgument>
                                                                                                                                                 </Assign.To>
                                                                                                                                                 <Assign.Value>
-                                                                                                                                                  <InArgument x:TypeArguments="x:String">[Regex.Replace(BookingReference, "[^0-9]", "")]</InArgument>
+                                                                                                                                                  <InArgument x:TypeArguments="x:String">["GB"+Regex.Replace(BookingReference, "[^0-9]", "")]</InArgument>
                                                                                                                                                 </Assign.Value>
                                                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1083,7 +1190,7 @@
                                                                                                                                                           <av:PointCollection x:Key="ConnectorLocation">500,4180.5 500,4230.5</av:PointCollection>
                                                                                                                                                         </scg:Dictionary>
                                                                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                      <Sequence DisplayName="Native Citrix" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                                                                                                                      <Sequence DisplayName="Open Booking Import queue" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1106,7 +1213,11 @@
                                                                                                                                                                     <ui:CursorPosition OffsetX="591" OffsetY="71" Position="TopLeft" />
                                                                                                                                                                   </ui:Click.CursorPosition>
                                                                                                                                                                   <ui:Click.Target>
-                                                                                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1c3dcab53568f454019cb36422652d1a" WaitForReady="INTERACTIVE" />
+                                                                                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="1c3dcab53568f454019cb36422652d1a" WaitForReady="INTERACTIVE">
+                                                                                                                                                                      <ui:Target.TimeoutMS>
+                                                                                                                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                                      </ui:Target.TimeoutMS>
+                                                                                                                                                                    </ui:Target>
                                                                                                                                                                   </ui:Click.Target>
                                                                                                                                                                 </ui:Click>
                                                                                                                                                               </Sequence>
@@ -1145,7 +1256,18 @@
                                                                                                                                                                     <ActivityFunc.Argument>
                                                                                                                                                                       <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                                                                                                                                     </ActivityFunc.Argument>
-                                                                                                                                                                    <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+                                                                                                                                                                    <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2">
+                                                                                                                                                                      <ui:GoogleOCR.AllowedCharacters>
+                                                                                                                                                                        <InArgument x:TypeArguments="x:String">
+                                                                                                                                                                          <Literal x:TypeArguments="x:String" Value="" />
+                                                                                                                                                                        </InArgument>
+                                                                                                                                                                      </ui:GoogleOCR.AllowedCharacters>
+                                                                                                                                                                      <ui:GoogleOCR.DeniedCharacters>
+                                                                                                                                                                        <InArgument x:TypeArguments="x:String">
+                                                                                                                                                                          <Literal x:TypeArguments="x:String" Value="" />
+                                                                                                                                                                        </InArgument>
+                                                                                                                                                                      </ui:GoogleOCR.DeniedCharacters>
+                                                                                                                                                                    </ui:GoogleOCR>
                                                                                                                                                                   </ActivityFunc>
                                                                                                                                                                 </ui:OCRTextExists.OCREngine>
                                                                                                                                                                 <ui:OCRTextExists.Target>
@@ -1194,10 +1316,14 @@
                                                                                                                                                                           </ui:CursorPosition>
                                                                                                                                                                         </ui:ClickImage.CursorPosition>
                                                                                                                                                                         <ui:ClickImage.Image>
-                                                                                                                                                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+                                                                                                                                                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                                                                                                                                                                         </ui:ClickImage.Image>
                                                                                                                                                                         <ui:ClickImage.Target>
-                                                                                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Birmingham High Street ( -*' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Birmingham High Street ( -*' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                                                                            <ui:Target.TimeoutMS>
+                                                                                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                                            </ui:Target.TimeoutMS>
+                                                                                                                                                                          </ui:Target>
                                                                                                                                                                         </ui:ClickImage.Target>
                                                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1214,7 +1340,7 @@
                                                                                                                                                                               <av:PointCollection x:Key="ConnectorLocation">490,4635.5 490,4685.5</av:PointCollection>
                                                                                                                                                                             </scg:Dictionary>
                                                                                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;GB&quot;+BookingReference]">
+                                                                                                                                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[BookingReference]">
                                                                                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1245,7 +1371,7 @@
                                                                                                                                                                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                                                                                                                                                     </scg:Dictionary>
                                                                                                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                                                  <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Double Click OCR Text" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickOCRText_3" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" SendWindowMessages="False" Text="[&quot;GB&quot;+BookingReference]">
+                                                                                                                                                                                  <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Double Click OCR Text" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickOCRText_3" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" SendWindowMessages="False" Text="[BookingReference]">
                                                                                                                                                                                     <ui:ClickOCRText.CursorPosition>
                                                                                                                                                                                       <ui:CursorPosition Position="Center">
                                                                                                                                                                                         <ui:CursorPosition.OffsetX>
@@ -1261,11 +1387,15 @@
                                                                                                                                                                                         <ActivityFunc.Argument>
                                                                                                                                                                                           <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                                                                                                                                                         </ActivityFunc.Argument>
-                                                                                                                                                                                        <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_6" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+                                                                                                                                                                                        <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_3" Image="[Image]" />
                                                                                                                                                                                       </ActivityFunc>
                                                                                                                                                                                     </ui:ClickOCRText.OCREngine>
                                                                                                                                                                                     <ui:ClickOCRText.Target>
-                                                                                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Birmingham High Street ( -*' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Birmingham High Street ( -*' /&gt;" WaitForReady="INTERACTIVE">
+                                                                                                                                                                                        <ui:Target.TimeoutMS>
+                                                                                                                                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                                                        </ui:Target.TimeoutMS>
+                                                                                                                                                                                      </ui:Target>
                                                                                                                                                                                     </ui:ClickOCRText.Target>
                                                                                                                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1407,10 +1537,13 @@
                         </ActivityFunc>
                       </ui:GetOCRText.OCREngine>
                       <ui:GetOCRText.Target>
-                        <ui:Target Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bd902215caf48ab36dec65d47ed2dd8b" WaitForReady="INTERACTIVE">
+                        <ui:Target Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="bd902215caf48ab36dec65d47ed2dd8b" WaitForReady="INTERACTIVE">
                           <ui:Target.ClippingRegion>
                             <ui:Region Rectangle="62, 145, 54, 30" />
                           </ui:Target.ClippingRegion>
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
                         </ui:Target>
                       </ui:GetOCRText.Target>
                       <ui:GetOCRText.Text>
@@ -1486,7 +1619,11 @@
                     <ui:CursorPosition OffsetX="66" OffsetY="635" Position="TopLeft" />
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a7cf1869fde8240b45487c2743dbd13d" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="a7cf1869fde8240b45487c2743dbd13d" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
               </Sequence>
@@ -1553,7 +1690,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:ImageFound DisplayName="No Matching Record Popup" Found="[CreateNewRecord]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ImageFound_1">
         <ui:ImageFound.Image>
-          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAANSURBVBhXY2BgYPgPAAEEAQBwIGULAAAAAElFTkSuQmCC" />
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAANSURBVBhXY2BgYPgPAAEEAQBwIGULAAAAAElFTkSuQmCC" />
         </ui:ImageFound.Image>
         <ui:ImageFound.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Question - \\Remote' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
@@ -1587,7 +1724,11 @@
             <ui:CursorPosition OffsetX="79" OffsetY="295" Position="TopLeft" />
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7502b369fb00629c166f88435a3d5668" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Create New Folder - \\Remote' /&gt;" WaitForReady="INTERACTIVE" />
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7502b369fb00629c166f88435a3d5668" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Create New Folder - \\Remote' /&gt;" WaitForReady="INTERACTIVE">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+            </ui:Target>
           </ui:Click.Target>
         </ui:Click>
         <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="330.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
@@ -1675,5 +1816,63 @@
     <x:Reference>__ReferenceID48</x:Reference>
     <x:Reference>__ReferenceID49</x:Reference>
     <x:Reference>__ReferenceID50</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">140,4764.02</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickOCRText_4" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="[BookingReference]">
+        <ui:ClickOCRText.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:ClickOCRText.CursorPosition>
+        <ui:ClickOCRText.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+            <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_7" Image="[Image]" />
+          </ActivityFunc>
+        </ui:ClickOCRText.OCREngine>
+        <ui:ClickOCRText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:ClickOCRText.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ClickOCRText>
+    </FlowStep>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">60,4699</av:Point>
+          <av:Size x:Key="ShapeSize">200,22</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MicrosoftOCR FilterRegion="{x:Null}" Image="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:MicrosoftOCR>
+    </FlowStep>
   </Flowchart>
 </Activity>
