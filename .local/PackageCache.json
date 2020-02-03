@@ -218,18 +218,18 @@
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/CefSharp.BrowserSubprocess.Core.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/CefSharp.Core.dll",
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/CefSharp.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/CefSharp.Wpf.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/CefSharp.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/UiPath.CEFSharpBundle.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/chrome_elf.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/d3dcompiler_47.dll",
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/libcef.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/libEGL.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/libGLESv2.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/libcef.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/msvcp140.dll",
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/UiPath.CEFSharpBundle.dll",
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/vcruntime140.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/swiftshader/libEGL.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/swiftshader/libGLESv2.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.cefsharpbundle/1.1.1\\lib/net452/vcruntime140.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.documentprocessing.contracts/1.4.1\\lib/net461/UiPath.DocumentProcessing.Contracts.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.IntelligentOCR.Activities.Design.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.IntelligentOCR.Activities.dll",
@@ -246,12 +246,21 @@
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.OutOfProcessUi.Common.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.PDF.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.TableProcessing.dll",
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.TaxonomyManager.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.TaxonomyManager.Host.Local.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.TaxonomyManager.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.Utils.dll",
-        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.ValidationStation.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.ValidationStation.Host.Local.dll",
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.ValidationStation.ValueParsing.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.intelligentocr.activities/4.0.1\\lib/net461/UiPath.SmartData.ValidationStation.dll",
+        "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.ocr.contracts/2.2.1\\lib/net45/UiPath.OCR.Contracts.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.OCR.Contracts",
+        "Version": "2.2.1"
+      },
+      "Assemblies": [
         "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\uipath.ocr.contracts/2.2.1\\lib/net45/UiPath.OCR.Contracts.dll"
       ]
     }

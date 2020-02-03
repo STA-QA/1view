@@ -48,7 +48,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg1:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,490" sap2010:WorkflowViewState.IdRef="WindowScope_54" InformativeScreenshot="e11e35a8c6fe3a35159eca06847631f0" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Dolphin&amp;apos;s Booking Management Module - Covent Garden ( GBP ) - \\*' /&gt;">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,490" sap2010:WorkflowViewState.IdRef="WindowScope_54" InformativeScreenshot="e11e35a8c6fe3a35159eca06847631f0" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Covent Garden ( GBP ) - \\*' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -65,7 +65,11 @@
                         <ui:CursorPosition OffsetX="360" OffsetY="427" Position="TopLeft" />
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="aee3a1cfdcb315d2d197c46c09ba803d" WaitForReady="INTERACTIVE" />
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="aee3a1cfdcb315d2d197c46c09ba803d" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Dolphin's'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_127" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -73,7 +77,11 @@
                         <ui:CursorPosition OffsetX="660" OffsetY="454" Position="TopLeft" />
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7eee1684225c8fc0a720c9672129ef78" WaitForReady="INTERACTIVE" />
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="7eee1684225c8fc0a720c9672129ef78" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
                   </Sequence>
@@ -106,7 +114,7 @@
               <av:PointCollection x:Key="ConnectorLocation">300,346.333333333333 300,425.333333333333</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="TryCatch - Enter Dep date and Vendor" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="TryCatch - Enter Dep date and Vendor" sap:VirtualizedContainerService.HintSize="514,1983" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
               <Sequence DisplayName="Enter Dep date and Vendor" sap:VirtualizedContainerService.HintSize="476,1756" sap2010:WorkflowViewState.IdRef="Sequence_95">
                 <sap:WorkflowViewStateService.ViewState>
@@ -128,7 +136,11 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_51" SendWindowMessages="False" SimulateType="False" Text="G Adv">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="57d712680cc44146d79b6358f5f79f75" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="57d712680cc44146d79b6358f5f79f75" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
                         <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Tour'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_128" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -136,13 +148,21 @@
                             <ui:CursorPosition OffsetX="90" OffsetY="59" Position="TopLeft" />
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="97d88ffa2374e5c9e8b1e5400c779416" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="97d88ffa2374e5c9e8b1e5400c779416" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
                         <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_17" />
                         <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_52" SendWindowMessages="False" SimulateType="False" Text="08AUG21">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="05dac66a0541cc1b103f3d5d260e1538" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="05dac66a0541cc1b103f3d5d260e1538" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
                         <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_15" />
@@ -151,12 +171,20 @@
                             <ui:CursorPosition OffsetX="342" OffsetY="55" Position="TopLeft" />
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9bcaec8fc8420ee34c6d3e25e4027425" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="9bcaec8fc8420ee34c6d3e25e4027425" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
                         <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_53" SendWindowMessages="False" SimulateType="False" Text="00">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9ef78865d6369189285bf1803be180d4" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="9ef78865d6369189285bf1803be180d4" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
                         <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_16" />
@@ -172,7 +200,11 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="469dbc5174c8469f70c885eb104e6b7e" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="469dbc5174c8469f70c885eb104e6b7e" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
                         <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Tour'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_130" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -180,12 +212,20 @@
                             <ui:CursorPosition OffsetX="108" OffsetY="104" Position="TopLeft" />
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="475584077b35dd4d11bd5e95b5aba6b2" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="475584077b35dd4d11bd5e95b5aba6b2" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
                         <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_54" SendWindowMessages="False" SimulateType="False" Text="0">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a2ce0c5f9c4f0ebc688c5c3f9d17fb26" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="a2ce0c5f9c4f0ebc688c5c3f9d17fb26" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
                       </Sequence>
@@ -195,10 +235,10 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="480,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg1:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -245,12 +285,20 @@
                                 <ui:CursorPosition OffsetX="251" OffsetY="103" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a2ce0c5f9c4f0ebc688c5c3f9d17fb26" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="a2ce0c5f9c4f0ebc688c5c3f9d17fb26" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_55" SendWindowMessages="False" SimulateType="False" Text="%">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7e56312c3c1f48ef8c7e964a4966b765" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="7e56312c3c1f48ef8c7e964a4966b765" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                             <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Tour'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_132" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -258,7 +306,11 @@
                                 <ui:CursorPosition OffsetX="358" OffsetY="106" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="88d5cb231704c7a2a2cbfb4952768837" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="88d5cb231704c7a2a2cbfb4952768837" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                           </Sequence>
@@ -282,7 +334,11 @@
                                 <ui:CursorPosition OffsetX="354" OffsetY="446" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4bd2afea92db8ce587950c8e9607b6a2" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="4bd2afea92db8ce587950c8e9607b6a2" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                             <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_13" />
@@ -304,7 +360,11 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_56" SendWindowMessages="False" SimulateType="False" Text="B">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c189107d127aa6ad7238231028bf3e48" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="c189107d127aa6ad7238231028bf3e48" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                             <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Tour'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_134" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -312,7 +372,11 @@
                                 <ui:CursorPosition OffsetX="148" OffsetY="129" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="43b9bcfa118c5e0062f065f518ec9b96" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="43b9bcfa118c5e0062f065f518ec9b96" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                           </Sequence>
@@ -336,7 +400,11 @@
                                 <ui:CursorPosition OffsetX="351" OffsetY="446" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8c5d01aaca9390847e93e1841db86b13" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="8c5d01aaca9390847e93e1841db86b13" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                           </Sequence>
@@ -357,7 +425,11 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_57" SendWindowMessages="False" SimulateType="False" Text="Not Applicable">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4279726882a2f942542722d4f15b37e5" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="4279726882a2f942542722d4f15b37e5" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                             <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_14" />
@@ -366,7 +438,11 @@
                                 <ui:CursorPosition OffsetX="457" OffsetY="82" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="75a7df14b9dff102b086853d6eaa8059" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="75a7df14b9dff102b086853d6eaa8059" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                             <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Tour'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_137" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -374,12 +450,20 @@
                                 <ui:CursorPosition OffsetX="78" OffsetY="181" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="110ee42148eaffdbd69249372ca2e474" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="110ee42148eaffdbd69249372ca2e474" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_58" SendWindowMessages="False" SimulateType="False" Text="OK">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="08b98ca3fd819b75c1bca9c9cff080e2" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="08b98ca3fd819b75c1bca9c9cff080e2" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                             <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Tour'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_138" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -387,12 +471,20 @@
                                 <ui:CursorPosition OffsetX="201" OffsetY="181" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e285eb22cf5d31d5948c26465db218fe" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="e285eb22cf5d31d5948c26465db218fe" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_59" SendWindowMessages="False" SimulateType="False" Text="Test Confirmation">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e285eb22cf5d31d5948c26465db218fe" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="e285eb22cf5d31d5948c26465db218fe" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                           </Sequence>
@@ -445,12 +537,20 @@
                                 <ui:CursorPosition OffsetX="453" OffsetY="84" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c3795284836528cad69d79db2ad109cf" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="c3795284836528cad69d79db2ad109cf" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_60" SendWindowMessages="False" SimulateType="False" Text="Test Tour">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3cca3cce600e4aee231fc9d79aebc092" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="3cca3cce600e4aee231fc9d79aebc092" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                             <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Tour'" sap2010:WorkflowViewState.IdRef="Click_140" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -458,12 +558,20 @@
                                 <ui:CursorPosition OffsetX="144" OffsetY="131" Position="TopLeft" />
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e1ed4b9b5d86cc60f95aab827dd19ad7" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="e1ed4b9b5d86cc60f95aab827dd19ad7" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
                             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Tour'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_61" SendWindowMessages="False" SimulateType="False" Text="Not Applicable">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0027a391f2757f73c2c45368732bbcf9" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="0027a391f2757f73c2c45368732bbcf9" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                           </Sequence>
@@ -498,7 +606,11 @@
                                     <ui:CursorPosition OffsetX="518" OffsetY="107" Position="TopLeft" />
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="442136fe3c4576bb64e1de5faed137f0" WaitForReady="INTERACTIVE" />
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="442136fe3c4576bb64e1de5faed137f0" WaitForReady="INTERACTIVE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
                                   </ui:Click.Target>
                                 </ui:Click>
                               </Sequence>
@@ -517,7 +629,11 @@
                                     <ui:CursorPosition OffsetX="91" OffsetY="22" Position="TopLeft" />
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="091369473dd8ec17f97ddb2cc4e1ea80" WaitForReady="INTERACTIVE" />
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="091369473dd8ec17f97ddb2cc4e1ea80" WaitForReady="INTERACTIVE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
                                   </ui:Click.Target>
                                 </ui:Click>
                               </Sequence>
@@ -557,7 +673,11 @@
                                         <ui:CursorPosition OffsetX="1029" OffsetY="314" Position="TopLeft" />
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="15d93ccec02a05483dc717ce204cf21b" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="15d93ccec02a05483dc717ce204cf21b" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
                                   </Sequence>
@@ -581,7 +701,11 @@
                                         <ui:CursorPosition OffsetX="46" OffsetY="280" Position="TopLeft" />
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4db3381ea13864dfd52c6bed3d27b3aa" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="4db3381ea13864dfd52c6bed3d27b3aa" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
                                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Pricing'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_145" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -589,7 +713,11 @@
                                         <ui:CursorPosition OffsetX="365" OffsetY="405" Position="TopLeft" />
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="27056e45dae23e6dfbea02890305e22d" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="27056e45dae23e6dfbea02890305e22d" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
                                   </Sequence>
@@ -613,12 +741,20 @@
                                         <ui:CursorPosition OffsetX="228" OffsetY="287" Position="TopLeft" />
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6e03653685b8a18ab43658fa3e577a73" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="6e03653685b8a18ab43658fa3e577a73" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
                                     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Pricing'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_62" SendWindowMessages="False" SimulateType="False" Text="50">
                                       <ui:TypeInto.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a2f5acd02337de05ac2119990e42f60c" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="a2f5acd02337de05ac2119990e42f60c" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:TypeInto.Target>
                                     </ui:TypeInto>
                                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Pricing'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_147" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -626,12 +762,20 @@
                                         <ui:CursorPosition OffsetX="154" OffsetY="240" Position="TopLeft" />
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6de23942914c90b9f17fa20a279d6868" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="6de23942914c90b9f17fa20a279d6868" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
                                     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Pricing'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_63" SendWindowMessages="False" SimulateType="False" Text="25">
                                       <ui:TypeInto.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="92a45cf178b14d5527c4aa4e029ab667" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="92a45cf178b14d5527c4aa4e029ab667" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:TypeInto.Target>
                                     </ui:TypeInto>
                                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Pricing'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_148" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -639,7 +783,11 @@
                                         <ui:CursorPosition OffsetX="225" OffsetY="238" Position="TopLeft" />
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="92a45cf178b14d5527c4aa4e029ab667" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="92a45cf178b14d5527c4aa4e029ab667" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
                                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Pricing'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_149" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -647,7 +795,11 @@
                                         <ui:CursorPosition OffsetX="465" OffsetY="403" Position="TopLeft" />
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="33546475e8a4875bf25c89d0130576bc" WaitForReady="INTERACTIVE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="33546475e8a4875bf25c89d0130576bc" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
                                   </Sequence>
@@ -686,7 +838,11 @@
                                             <ui:CursorPosition OffsetX="883" OffsetY="514" Position="TopLeft" />
                                           </ui:Click.CursorPosition>
                                           <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="89df45f59d027507fa826095fdccb423" WaitForReady="INTERACTIVE" />
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="89df45f59d027507fa826095fdccb423" WaitForReady="INTERACTIVE">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                            </ui:Target>
                                           </ui:Click.Target>
                                         </ui:Click>
                                       </Sequence>

@@ -6383,6 +6383,7 @@
       "UiPath.GoogleVision.Activities >= 1.1.1 <= 1.1.1",
       "UiPath.IntelligentOCR.Activities >= 4.0.1 <= 4.0.1",
       "UiPath.Mail.Activities >= 1.5.1 <= 1.5.1",
+      "UiPath.OCR.Contracts >= 2.2.1 <= 2.2.1",
       "UiPath.System.Activities >= 19.7.0 <= 19.7.0",
       "UiPath.UIAutomation.Activities >= 19.11.1 <= 19.11.1"
     ]
@@ -6446,6 +6447,11 @@
             "target": "Package",
             "version": "[1.5.1, 1.5.1]"
           },
+          "UiPath.OCR.Contracts": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[2.2.1, 2.2.1]"
+          },
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
@@ -6459,28 +6465,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Collections.Immutable 1.5.0' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
-      "libraryId": "System.Collections.Immutable"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Xaml.Behaviors.Wpf 1.0.1' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
-      "libraryId": "Microsoft.Xaml.Behaviors.Wpf"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'MathNet.Numerics 4.5.1' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
-      "libraryId": "MathNet.Numerics"
-    }
-  ]
+  }
 }
