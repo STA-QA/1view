@@ -6389,15 +6389,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\": {}
+    "C:\\Users\\rekha.rajendran\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "OneView",
       "projectName": "OneView",
-      "projectPath": "C:\\QA Git Repos\\1view\\.local",
-      "packagesPath": "C:\\Users\\Kiranmai.adams\\.nuget\\packages\\",
-      "outputPath": "C:\\QA Git Repos\\1view\\.local"
+      "projectPath": "C:\\Users\\rekha.rajendran\\UiPath\\1View\\1view\\.local",
+      "packagesPath": "C:\\Users\\rekha.rajendran\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rekha.rajendran\\UiPath\\1View\\1view\\.local"
     },
     "frameworks": {
       "net461": {
@@ -6465,5 +6465,56 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Google.Apis 1.38.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Google.Apis"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Google.Apis.Auth 1.38.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Google.Apis.Auth"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Google.Apis.Vision.v1 1.38.0.1495' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Google.Apis.Vision.v1"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Google.Apis.Core 1.38.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Google.Apis.Core"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Xaml.Behaviors.Wpf 1.0.1' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
+      "libraryId": "Microsoft.Xaml.Behaviors.Wpf"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MathNet.Numerics 4.5.1' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
+      "libraryId": "MathNet.Numerics"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Collections.Immutable 1.5.0' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
+      "libraryId": "System.Collections.Immutable"
+    }
+  ]
 }
