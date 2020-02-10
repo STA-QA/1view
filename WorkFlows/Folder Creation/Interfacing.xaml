@@ -57,7 +57,6 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Interfacin" sap:VirtualizedContainerService.HintSize="644,1583" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -373,7 +372,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,283 300,317</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Click on Booking Import Queue icon" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence DisplayName="Click on Booking Import Queue icon" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -396,7 +395,7 @@
                     <ui:CursorPosition OffsetX="0" OffsetY="0" Position="Center" />
                   </ui:ClickImage.CursorPosition>
                   <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOlSURBVFhH7ZZ5SBRRHMc7oYjogIqgIuqPooKg6P4ziIgIo7+iP4LuMjrN7LIs6bJMMw26i05MOu2itLLo0EpTMcvdnXVdc61ddlzbNUf7Nu/tzOzszNt2dTeI2C98WN/vvd97n51D7fC5ohj/IlGxthIVaytMsQ6LNoREr9ityHn1QdcfCcISI3RcvBHxV2/D3eDW7RMOYYvJTD+QhVqbQ7dXe4mYWHthnU+IigWCdT6BKfYvEL2VgWCdT/j/xFh9kSQsMVY9HPwc1AOlyGjSIq+LVOQ9FQf1QCmqBAIhr9OmjnfB6fZII30y815icNxu3PpQJlW8kfdUHNQDma5LNyEm/TQGbUjyk1FD1pFPdcqsdei/NhGdxD/so7YfwMLTV5Dx5AXemWvQJAiYnX6K9nRZEgfTd4fU5Y28pwxTLPb8dTjLH4GvfI5Sgxmp9/Ix+8hJ9Fy15Y9itc4GrLl8A92WxyvrZAaqvmTKg3ypwxdSVzswxe4UloLLmoYvSX1h2DcENRfn43tBFnhzKfI+VmLH9Vy6rrP4zVnRCo7ecVCRmpCcJq3yT0hi9hoDlWJhSh2D2pxYOIquwWYxoqW5RdpaHyI488gJRWp4wl6su3JTmvVPSGKOwstMKZmqPf3w9dZ62KoNaBF8YvZGN94Yq5WH/3ZxuSI1JjGFfk5OTqdz2oQkZr22mClEqLm0ADz3ka7rs3qbtK03MRlnFJHe4lyPlQnoKf77nV1YgpHb9tM6ub1Ca6vU4UtIYsZDI5hS1SdnwGitx7D4ZG+zuJk65MAzL95iqDhPfiUMWLcTpwre0LnsohJFusRSS2vqBBVzccVMKRn+y2uM35XqbdaIySniLJiecpzOH31cQGutv34pV+2sKK9NULFvz45SAfIccZlTdWJcxkRUcWZvcwAxEkO9Hd1XbMay89lSxXfVll/w1eQEFbOcmysSQ6+c22FnylnOzqFzs1JPSNvqIzQJcItvZUGFQap4r9q8zHOwNbikii9BxZxlD/3GP+qt9NnSypnSxsLxPgdNrh9o9jRD+ClQyM9NPA9nRR489nq0CvoHnZWgYiw8Tids9xNRlTxAJ2g8NFJ8ixehLncr6u4m0LfW9jAJlSYzxu06TA8MFfWZIYnJNFo/00O5Y5N0glzmFCrGWz4h7f5T5sHBUJ/VJjE1Hr4BrupyNH41wS3eMu0862CCdl0g2i0WDJYUgbWWRUTFWCJ/grWHzF+7YuESFWsbxfgN7JErAzWSY+oAAAAASUVORK5CYII=" />
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAlCAYAAAAwYKuzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOdSURBVFhH7ZdrSFNhGMftBkVEFygJKqI+JCUERfePQUREGH2KPgTdrIzumd0sS7pZppkGmmnRTVRKy26UXTS6aKWpmOW2M+fMWRs7zjbzaP/OeXfOdjznzW1ugoV/+DH3vJfnt/fsFQ36Ul2G3kyfoL/8m4JBa3Z6xfCI/ch9/VG1PpD4JSjQb+0uRN7Kh73ZrtonEPgtKLHwVAoaTBbVXv4SMMHuQusvp0/QE7T+cqiCvYm+R+wJWn85/68gbV1P4Jcgre4PSg/Sg1qkLFYizQtUpD2VBFywkbXBaneI79RJLnyF8buPIu9jpVhxRtpTCVVw0Po9CEtMx7idMZ2k5AjzhFd5Ko2NGLMtGv35PyCmHjyF1ek3kfS0GO/19WjlOCxNvETWDFy3G7ofFnGVM9KeSqiCEVdyYK16DLbmJSo0esTff4al59IwbPO+LgUbrM3YeuM2BodHuuZJjJV92LiHz8QV7gh1pQfpQSveLakAk7IAX2NGQXNiAuqvrcSPohSw+goUfqrBoZwCMm8AfxK0KEWnHTrtkpsVmyDO6hyfBM31GiJHQxcfiobcCFhKs2AyaNHe1i62UEcQXXwu1SU3Oeo4tt+8I452jk+ClpIbVDmJ2mOj8S1vB0x1GrRzbkFzix1vtXWuS5JfVuWSC42OI69zYxPJmDI+CRqz1lLFBOqvrwLLfCLzRm45IG7vTFjSZZfQCH5s6KYoDOP/LcguKUfIgZOkLjx2rqNDXOGOT4LaM1OocnVpi6A1NmFSZKxzMb+pPELjy8XvMJEfF36VBG8/jEtFb8lYdmm5S77c0EBq8ngtaGPKqHIS7Nc3mHkk3rlYISillDFgYdxFMn7+SRGpdfz+7TrFDP5DKOO14PcX54mI8D1jkuerBJmk2ahl9M7FfxEUomkyY8jGvdhwJVusuE8x/Kq7JsVrQUPmcp4wcpJ2i5kqachYRsaWxKeK26vDtXKw87e4qFojVpynuCI5E6Zmm1hxx2tBa+WjTu9/NhnJd08pqUuYDsuHXLTafqLN0QbuF0cQfm5lWVirC+EwN6GDU18IWrwWpOGwWmF6EI3a2GCVqPZMCH/r16CxYD8a70WRW256FIManR4zjpwljb2F1tsrQYkW4xfSnLkwRyXKJM8jgqzhMxIePKcKeILW0ydBOQ62Gba6KrR808HOP0rlOE1AQDnPE90W9ARNToA2tysCKkgT6graHkp67AQDRZ+gf5ThD2DPqQMoL3oZAAAAAElFTkSuQmCC" />
                   </ui:ClickImage.Image>
                   <ui:ClickImage.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ReturnFlights" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="964,4263" sap2010:WorkflowViewState.IdRef="ReturnFlights_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ReturnFlights" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="964,4263" sap2010:WorkflowViewState.IdRef="ReturnFlights_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -47,13 +47,14 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="ReturnFlights" sap:VirtualizedContainerService.HintSize="944,4203" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="NoOfPassengers" />
-      <Variable x:TypeArguments="x:String" Name="Cus_FirstName" />
-      <Variable x:TypeArguments="x:String" Name="Cus_LastName" />
+      <Variable x:TypeArguments="x:String" Default="1" Name="NoOfPassengers" />
+      <Variable x:TypeArguments="x:String" Default="Green" Name="Cus_FirstName" />
+      <Variable x:TypeArguments="x:String" Default="Daisy" Name="Cus_LastName" />
       <Variable x:TypeArguments="x:Boolean" Name="CreateNewRecord" />
       <Variable x:TypeArguments="x:String" Name="FolderNumber" />
       <Variable x:TypeArguments="x:Boolean" Name="RulesDisplayed" />
@@ -73,7 +74,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID40</x:Reference>
+      <x:Reference>__ReferenceID36</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
@@ -91,7 +92,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </Delay>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID29">
+        <FlowStep x:Name="__ReferenceID24">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">240,3015.33333333333</av:Point>
@@ -141,7 +142,7 @@
             </ui:WindowScope>
           </Sequence>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID30">
+            <FlowStep x:Name="__ReferenceID25">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">220,3143.66666666667</av:Point>
@@ -151,10 +152,10 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:ImageFound DisplayName="Assertion - Verify fares" Found="[FaresFound]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ImageFound_3">
                 <ui:ImageFound.Image>
-                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOIAAAAXCAYAAAAWT5N9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIoSURBVHhe7ZNrbuNADINz/1P1Zlk7wABcLiXNw64nC/74gFIkZbuIXu/3z9sY8yw+RGM2wIdozAb4EI3ZAB+iMRvwXx3i6/X6oDxjduZziO0HzHA4Y6bTwGfO7jhZ7d/Jzu/WQ3v/2W/A/uyOiDt2/jbH24NY+KAr/hlX7NiVb/42fPeZ7+DOzI6Mq/c9wfH2IJIPap7KsNfIMuhxRnkZuFf12e/JsL8C725kGeVFGmfKU77KRGB+tHvCnZUdqsse+yqjvEjjDMl89JTPmUP9G8aZmqucmkVE2ZEdit69o/oKRnZy9mo9Q9sxs4d7o3uqfqWZLN/+jvwrtOJwQQQFnqucmkVE2ZEdit69lb6DkWeobJtlXq8e5er+6L4qz/5sPupE+VmtOFwQQYHnKqdmSPORKMPzXnr3VvoOqmc0H4ky0ZzJMuhVYAd3tFkFZ0e6J1WefZVvMyTLI1W+aab5KoPex/9LRCGaq5yaRV6Ujea99O6t9B1kz2BPZdss83CWsZp/us+wv6qZKs+6QuUPlQfUXOXULPKibDTvpXfvqOa58iqyHnurumI1v1v/as1UedYVKn+oPMDebIY99JV3gv0M1T1hP9I4U57KKL8C+7yDPfQrjbMej/0euDu6B/sjvUbW51mWQbI8gz2VH/HY/2R4YMydRD/Eb+KOb/Ahml/n24/Rh2jMA7TDQ1RuBR+iMRvgQzRmA3yIxmyAD9GYDfAhGvM4P+8/5faUQnfKkMoAAAAASUVORK5CYII=" />
                 </ui:ImageFound.Image>
                 <ui:ImageFound.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='LON-MEL Wed 12 Aug 1 ADT - \\Remote' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='LON-HYD Tue 13 Oct / HYD-LON Tue 20 Oct 1 ADT - \\Remote' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -170,7 +171,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ImageFound>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID31" Condition="[FaresFound]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                <FlowDecision x:Name="__ReferenceID26" Condition="[FaresFound]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -181,7 +182,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID33">
+                    <FlowStep x:Name="__ReferenceID28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">100,3385.33333333333</av:Point>
@@ -238,7 +239,7 @@
                         </ui:WindowScope>
                       </Sequence>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID35">
+                        <FlowStep x:Name="__ReferenceID29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">100,3489</av:Point>
@@ -254,7 +255,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </Delay>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID39">
+                            <FlowStep x:Name="__ReferenceID33">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">160,3565.33333333333</av:Point>
@@ -388,7 +389,7 @@
                                 </Sequence>
                               </Sequence>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID37">
+                                <FlowStep x:Name="__ReferenceID31">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">170,3679</av:Point>
@@ -404,7 +405,7 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </Delay>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID38">
+                                    <FlowStep x:Name="__ReferenceID32">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">170,3739</av:Point>
@@ -423,12 +424,11 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:GetFromClipboard>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID36">
+                                        <FlowStep x:Name="__ReferenceID30">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">160,3803.66666666667</av:Point>
                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">260,3854.66666666667 260,3884.66666666667 250,3884.66666666667 250,3893.66666666667</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[PNR]">
@@ -438,67 +438,6 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:LogMessage>
-                                          <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID34">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">150,3893.66666666667</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">250,3944.66666666667 250,3974.66666666667 260,3974.66666666667 260,3993.66666666667</av:PointCollection>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Close" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_10" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                                <ui:ClickImage.CursorPosition>
-                                                  <ui:CursorPosition Position="Center">
-                                                    <ui:CursorPosition.OffsetX>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:CursorPosition.OffsetX>
-                                                    <ui:CursorPosition.OffsetY>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:CursorPosition.OffsetY>
-                                                  </ui:CursorPosition>
-                                                </ui:ClickImage.CursorPosition>
-                                                <ui:ClickImage.Image>
-                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAUCAYAAADFlsDIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADTSURBVFhH7ZRBDoMwDAT9tDwtz+uRQ/+TKpUs3K2t+BAjg4w0JPGaANstNOpwH/Q+XqNY03svs7z8mUVENSrj5McsKRQn7Ev433DeCEFN9mcmNFmaGbKm6RnhZwxN1sqMu5jFXJ4sCeq8xjpqVh21XfC+aZKFvZZmzbX1btIkC3tXa1lDZM8OeM9bJMuqaT2RXJ4sWbPm3j4519a74D1DkzXhF5CgZvVyHTWrjtpuQpP1FNiXsGTJX1tDuyY7arJq1Mfwb9aT+Jo1T4UPaq2NwkMbH/nKdJcxsqbsAAAAAElFTkSuQmCC" />
-                                                </ui:ClickImage.Image>
-                                                <ui:ClickImage.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Booking Confirmation - \\Remote' /&gt;">
-                                                    <ui:Target.TimeoutMS>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:Target.TimeoutMS>
-                                                    <ui:Target.WaitForReady>
-                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                    </ui:Target.WaitForReady>
-                                                  </ui:Target>
-                                                </ui:ClickImage.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </ui:ClickImage>
-                                              <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID28">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">160,3993.66666666667</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Interfacing workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="WorkFlows\Folder Creation\Interfacing.xaml">
-                                                    <ui:InvokeWorkflowFile.Arguments>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="BookingReference">[PNR]</InArgument>
-                                                    </ui:InvokeWorkflowFile.Arguments>
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </ui:InvokeWorkflowFile>
-                                                </FlowStep>
-                                              </FlowStep.Next>
-                                            </FlowStep>
-                                          </FlowStep.Next>
                                         </FlowStep>
                                       </FlowStep.Next>
                                     </FlowStep>
@@ -512,7 +451,7 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowStep x:Name="__ReferenceID32">
+                    <FlowStep x:Name="__ReferenceID27">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">400,3383.66666666667</av:Point>
@@ -543,7 +482,7 @@
           <av:PointCollection x:Key="ConnectorLocation">340,2792.37333333333 340,2854.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Delay Duration="00:00:50" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2">
+      <Delay Duration="00:01:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -551,15 +490,15 @@
         </sap:WorkflowViewStateService.ViewState>
       </Delay>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID26">
+        <FlowStep x:Name="__ReferenceID22">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">240,2854.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,53</av:Size>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">340,2906.5 340,2959</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Adding Flights Logic workflow" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="WorkFlows\TestCases\1view BMM - Other\Adding Flights Logic.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Adding Flights Logic workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="WorkFlows\TestCases\1view BMM - Other\Adding Flights Logic.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
             </ui:InvokeWorkflowFile.Arguments>
@@ -579,11 +518,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">240,2637</av:Point>
-          <av:Size x:Key="ShapeSize">200,69</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">340,2706.33333333333 340,2770.37333333333</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">340,2703 340,2770.37333333333</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Click On Flights Search" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <Sequence DisplayName="Click On Flights Search" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -622,7 +561,7 @@
         <x:Reference>__ReferenceID1</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID5">
+    <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">209,1979.87333333333</av:Point>
@@ -635,7 +574,7 @@
           <OutArgument x:TypeArguments="s:DateTime">[FromDate]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="s:DateTime">[FromDate.AddDays(200)]</InArgument>
+          <InArgument x:TypeArguments="s:DateTime">[FromDate.AddDays(250)]</InArgument>
         </Assign.Value>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -667,7 +606,7 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:TypeInto>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID22">
+            <FlowStep x:Name="__ReferenceID18">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">240,2194.5</av:Point>
@@ -690,7 +629,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:SendHotkey>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID25">
+                <FlowStep x:Name="__ReferenceID21">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">240,2294.5</av:Point>
@@ -726,20 +665,20 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ClickImage>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID23">
+                    <FlowStep x:Name="__ReferenceID19">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">209,2390</av:Point>
-                          <av:Size x:Key="ShapeSize">262,62</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">340,2452 340,2514.5</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">340,2450 340,2514.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="s:DateTime">[ReturnDate]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="s:DateTime">[ReturnDate.AddDays(207)]</InArgument>
+                          <InArgument x:TypeArguments="s:DateTime">[ReturnDate.AddDays(257)]</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -748,15 +687,15 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID24">
+                        <FlowStep x:Name="__ReferenceID20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">240,2514.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,53</av:Size>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">340,2566.5 340,2637</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'wfica32.exe BIFA'" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="[ReturnDate.ToString(&quot;dd/MM/yyyy&quot;)]">
+                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'wfica32.exe BIFA'" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="[ReturnDate.ToString(&quot;dd/MM/yyyy&quot;)]">
                             <ui:TypeInto.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3a3cb10034b5e3bf2a6ab291381f3c88" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='BIFA Consultant: ZQ3 - \\Remote' /&gt;" WaitForReady="INTERACTIVE">
                                 <ui:Target.TimeoutMS>
@@ -785,297 +724,143 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID3</x:Reference>
-    <FlowStep x:Name="__ReferenceID10">
+    <FlowStep x:Name="__ReferenceID7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">240,1454</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">340,1505 340,1594.5</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">240,1689</av:Point>
+          <av:Size x:Key="ShapeSize">200,22</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">340,1711 340,1757</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[FolderNumber + &quot;is the number&quot;]">
+      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </ui:LogMessage>
+      </Delay>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID6">
+        <FlowStep x:Name="__ReferenceID5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">240,1594.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">340,1645.5 340,1689</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">240,1757</av:Point>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">340,1823 340,1883.89333333333</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Flowchart DisplayName="Launch Bifa from 1view" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+          <Sequence DisplayName="Add the From and To for flights" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-                <av:Size x:Key="ShapeSize">60,75</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,173.666666666667</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Flowchart.StartNode>
-              <x:Reference>__ReferenceID4</x:Reference>
-            </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID4">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,173.666666666667</av:Point>
-                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="TryCatch - Launch BIFA" sap:VirtualizedContainerService.HintSize="557,1248" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                <TryCatch.Try>
-                  <Sequence DisplayName="Launch BIFA" sap:VirtualizedContainerService.HintSize="518,1020" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BIFAConsu Transpare'" sap:VirtualizedContainerService.HintSize="434,900" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="d9ac55bce141f019fc88052764ce9eb8" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='BIFA Consultant: ZAC - \\Remote' /&gt;">
+              <ui:WindowScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,754" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Native Citrix" sap:VirtualizedContainerService.HintSize="476,928" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="5f66108e2530b067e05503da5e0acdea" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Birmingham High Street ( -*' /&gt;">
-                        <ui:WindowScope.Body>
-                          <ActivityAction x:TypeArguments="x:Object">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Dolphin's'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition OffsetX="349" OffsetY="68" Position="TopLeft" />
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="22a279cccce4bb35cec2207aba97fcf4" WaitForReady="INTERACTIVE">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:WindowScope.Body>
-                      </ui:WindowScope>
-                      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'SelectanI Transpare'" sap:VirtualizedContainerService.HintSize="434,452" sap2010:WorkflowViewState.IdRef="WindowScope_3" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Select an Integrated Sales System - \\Remote' /&gt;">
-                        <ui:WindowScope.Body>
-                          <ActivityAction x:TypeArguments="x:Object">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,344" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Select'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition OffsetX="93" OffsetY="61" Position="TopLeft" />
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="4508ac1489a57d76394c275456a40bc5" WaitForReady="INTERACTIVE">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Select'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition OffsetX="176" OffsetY="188" Position="TopLeft" />
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="d8fb29dd60145f870600ba6963a6e10d" WaitForReady="INTERACTIVE">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:WindowScope.Body>
-                      </ui:WindowScope>
-                    </Sequence>
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe BIFA'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition OffsetX="80" OffsetY="100" Position="TopLeft" />
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="814115f13cd39a01f72a5912ac503e77" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe BIFA'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="Lon">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="814115f13cd39a01f72a5912ac503e77" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_9" />
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe BIFA'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition OffsetX="89" OffsetY="140" Position="TopLeft" />
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="d3ed8260d65506120b820edb139d975a" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe BIFA'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="HYD">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="5acdce94e7230510ecd89f482756a53d" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
                   </Sequence>
-                </TryCatch.Try>
-                <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="522.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ActivityAction x:TypeArguments="s:Exception">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                      </ActivityAction.Argument>
-                      <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="FAILED" />
-                    </ActivityAction>
-                  </Catch>
-                </TryCatch.Catches>
-              </TryCatch>
-            </FlowStep>
-          </Flowchart>
+                </ActivityAction>
+              </ui:WindowScope.Body>
+            </ui:WindowScope>
+          </Sequence>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID7">
+            <FlowStep x:Name="__ReferenceID6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">240,1689</av:Point>
-                  <av:Size x:Key="ShapeSize">200,22</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">340,1711 340,1757</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">240,1883.89333333333</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">340,1934.89333333333 340,1979.87333333333</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe BIFA'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                <ui:ClickImage.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:ClickImage.CursorPosition>
+                <ui:ClickImage.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHAAAAAkCAYAAABR/76qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEBSURBVHhe7ZZRDoMgEAU5usfrZz96AG5CpVFD7IJik8LDecmYZdkQ40Sjez0fAfSYpik45wICRUGgOFIC5/s0sWbvgpzAmn6OkaQPITBSIwWBjagRGNcpVv9oVoEhBVpzuf2j2d65zRuY7ufqUq9XeAPn2mLd7x0EFs5UYAiB+741l/ZydanXK3ICLc7Mrr10vzSrgpRA+AaB4iBQHASKswmMBWjyEbhcQJVAmsSUcYXlPPLnxId/NcnnE4Gtsgq0flCOQGAHQaB4ECgeBIoHgeJBoHgQKJ69wLiMnFkjsIMgUDx7gTUgsIMgUDyrwCjjCghsnE3A75hNUMF7H0AVH948VAi+ugIYqQAAAABJRU5ErkJggg==" />
+                </ui:ClickImage.Image>
+                <ui:ClickImage.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='BIFA Consultant: ZAC - \\Remote' /&gt;" WaitForReady="INTERACTIVE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:ClickImage.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </Delay>
+              </ui:ClickImage>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID8">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">240,1757</av:Point>
-                      <av:Size x:Key="ShapeSize">200,66</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">340,1823 340,1883.89333333333</av:PointCollection>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Add the From and To for flights" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BIFAConsu Transpare'" sap:VirtualizedContainerService.HintSize="434,900" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="d9ac55bce141f019fc88052764ce9eb8" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='BIFA Consultant: ZAC - \\Remote' /&gt;">
-                      <ui:WindowScope.Body>
-                        <ActivityAction x:TypeArguments="x:Object">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,754" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe BIFA'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition OffsetX="80" OffsetY="100" Position="TopLeft" />
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="814115f13cd39a01f72a5912ac503e77" WaitForReady="INTERACTIVE">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe BIFA'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="Lon">
-                              <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="814115f13cd39a01f72a5912ac503e77" WaitForReady="INTERACTIVE">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                </ui:Target>
-                              </ui:TypeInto.Target>
-                            </ui:TypeInto>
-                            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_9" />
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe BIFA'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition OffsetX="89" OffsetY="140" Position="TopLeft" />
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="d3ed8260d65506120b820edb139d975a" WaitForReady="INTERACTIVE">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe BIFA'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="HYD">
-                              <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="5acdce94e7230510ecd89f482756a53d" WaitForReady="INTERACTIVE">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                </ui:Target>
-                              </ui:TypeInto.Target>
-                            </ui:TypeInto>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:WindowScope.Body>
-                    </ui:WindowScope>
-                  </Sequence>
-                  <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID9">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">240,1883.89333333333</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">340,1934.89333333333 340,1979.87333333333</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe BIFA'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                        <ui:ClickImage.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:ClickImage.CursorPosition>
-                        <ui:ClickImage.Image>
-                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHAAAAAkCAYAAABR/76qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEBSURBVHhe7ZZRDoMgEAU5usfrZz96AG5CpVFD7IJik8LDecmYZdkQ40Sjez0fAfSYpik45wICRUGgOFIC5/s0sWbvgpzAmn6OkaQPITBSIwWBjagRGNcpVv9oVoEhBVpzuf2j2d65zRuY7ufqUq9XeAPn2mLd7x0EFs5UYAiB+741l/ZydanXK3ICLc7Mrr10vzSrgpRA+AaB4iBQHASKswmMBWjyEbhcQJVAmsSUcYXlPPLnxId/NcnnE4Gtsgq0flCOQGAHQaB4ECgeBIoHgeJBoHgQKJ69wLiMnFkjsIMgUDx7gTUgsIMgUDyrwCjjCghsnE3A75hNUMF7H0AVH948VAi+ugIYqQAAAABJRU5ErkJggg==" />
-                        </ui:ClickImage.Image>
-                        <ui:ClickImage.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='BIFA Consultant: ZAC - \\Remote' /&gt;" WaitForReady="INTERACTIVE">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                          </ui:Target>
-                        </ui:ClickImage.Target>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:ClickImage>
-                      <FlowStep.Next>
-                        <x:Reference>__ReferenceID5</x:Reference>
-                      </FlowStep.Next>
-                    </FlowStep>
-                  </FlowStep.Next>
-                </FlowStep>
+                <x:Reference>__ReferenceID4</x:Reference>
               </FlowStep.Next>
             </FlowStep>
           </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
-    <x:Reference>__ReferenceID7</x:Reference>
-    <x:Reference>__ReferenceID8</x:Reference>
-    <x:Reference>__ReferenceID9</x:Reference>
-    <FlowStep x:Name="__ReferenceID13">
+    <FlowStep x:Name="__ReferenceID10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">240,1004.5</av:Point>
@@ -1089,7 +874,7 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID11">
+        <FlowStep x:Name="__ReferenceID8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">240,1104.5</av:Point>
@@ -1103,12 +888,12 @@
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID12">
+            <FlowStep x:Name="__ReferenceID9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">240,1217</av:Point>
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">340,1283 340,1344.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">340,1283 340,1397</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Sequence DisplayName="Click &quot;Ok&quot; To complete " sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_15">
@@ -1131,101 +916,118 @@
                 </ui:Click>
               </Sequence>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID21">
+                <FlowStep x:Name="__ReferenceID34">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">240,1344.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">340,1395.5 340,1454</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">240,1397</av:Point>
+                      <av:Size x:Key="ShapeSize">200,66</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">340,1463 340,1507</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="TryCatch  - Fetch the Folder Number" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                  <Sequence DisplayName="Click on cart icon" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_49">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch.Try>
-                      <Sequence DisplayName="Fetch the folder number" sap:VirtualizedContainerService.HintSize="476,498" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="ui:GenericValue" Name="WficaExeDolphins" />
-                        </Sequence.Variables>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,406" sap2010:WorkflowViewState.IdRef="WindowScope_9" InformativeScreenshot="231607c2b69a6ca020f2ffe0a67feaff" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Covent Garden ( GBP ) - \\*' /&gt;">
-                          <ui:WindowScope.Body>
-                            <ActivityAction x:TypeArguments="x:Object">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Dolphin's'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_4">
-                                  <ui:GetOCRText.OCREngine>
-                                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
-                                      <ActivityFunc.Argument>
-                                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-                                      </ActivityFunc.Argument>
-                                      <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_4" Image="[Image]" Language="English (United Kingdom)" Profile="Screen" Scale="1" />
-                                    </ActivityFunc>
-                                  </ui:GetOCRText.OCREngine>
-                                  <ui:GetOCRText.Target>
-                                    <ui:Target Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="bd902215caf48ab36dec65d47ed2dd8b" WaitForReady="INTERACTIVE">
-                                      <ui:Target.ClippingRegion>
-                                        <ui:Region Rectangle="62, 145, 54, 30" />
-                                      </ui:Target.ClippingRegion>
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                    </ui:Target>
-                                  </ui:GetOCRText.Target>
-                                  <ui:GetOCRText.Text>
-                                    <OutArgument x:TypeArguments="x:String">[FolderNumber]</OutArgument>
-                                  </ui:GetOCRText.Text>
-                                </ui:GetOCRText>
-                              </Sequence>
-                            </ActivityAction>
-                          </ui:WindowScope.Body>
-                        </ui:WindowScope>
-                      </Sequence>
-                    </TryCatch.Try>
-                    <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="480,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ActivityAction x:TypeArguments="s:Exception">
+                    <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_14" />
+                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_20" InformativeScreenshot="ba23270e084cb14c0ed070e6a4431007" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Dolphin&amp;apos;s Booking Management Module - STA Travel UK ( GBP ) - \\*' /&gt;">
+                      <ui:WindowScope.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                           </ActivityAction.Argument>
-                          <Sequence sap:VirtualizedContainerService.HintSize="272,215" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_48">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Test failed" />
-                            <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="230,22" sap2010:WorkflowViewState.IdRef="EndTest_5" Status="FAILED" />
+                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Dolphin's'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                              <ui:ClickImage.CursorPosition>
+                                <ui:CursorPosition OffsetX="0" OffsetY="0" Position="Center" />
+                              </ui:ClickImage.CursorPosition>
+                              <ui:ClickImage.Image>
+                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAmCAYAAAC/H3lnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIgSURBVFhH7ZfJSxtRHMcVKSJS9Np/QKEH8VCKiChezEWvvbtUuojivoS4tGoUQ7WtAUt6UATxoGIUUdGLEkEjSNS4oFYs7gtEtHh9+h5MmIRvwF/fTCSSw4dhmN/j82F4k5lEuF2LLJQIveCdLRcLJcLBehMO1pvnE5zW8oMl1JqZ2T7DDk+v4MxTEDD4TdM3FpFXJnjxvpK9s/axqZUNOBtMAgbf3dyxUecqy+60saiCCm88v/NoPlg8ag//OTpnDcOT4k7z6LMLD5wLBqSHLsnUIYIXNvfg9WBACs7p+u3dGnqQ2vwdetWQgov7R6BIK16VNkKvGlJw9/Q8FGlFrm0AetWQgseX16FIK+zONehVQwrePDiBIi2I+VDNrj230KuGFHxz/Q/KtMBg+QWd/pCCOfFFRiiUpWfWAX3+kIMTH74vkFCW/eML6POHHGyw9EChDMn1FuhCkINLdPgtNg1NQBeCHNw7twSlMixt70MXghzMvyOQ9H+hfv2Rgw9OLoXo5adaeF1vyMFVg2MimP8bQdf1hhTs2NgTH/OR+eVs3r0LZ/SGFPza2O6z/7Qg5WsXdAWCFJze+hNKZXj7pRO6AkHew/yNlPXw8oj7XCeOj31DcWTWKpCDM9usPneIn6M5hMxaBXJw7McaHyk/R3MImbUK5OAMc7ePlJ+jOYTMWgVy8PbfU/HwRRdWiSM/R3MImbUK5OCnJhysLy52DxxWcPWDU0xrAAAAAElFTkSuQmCC" />
+                              </ui:ClickImage.Image>
+                              <ui:ClickImage.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:ClickImage.Target>
+                            </ui:ClickImage>
                           </Sequence>
                         </ActivityAction>
-                      </Catch>
-                    </TryCatch.Catches>
-                    <TryCatch.Finally>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[FolderNumber]" />
-                    </TryCatch.Finally>
-                  </TryCatch>
+                      </ui:WindowScope.Body>
+                    </ui:WindowScope>
+                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_15" />
+                  </Sequence>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID10</x:Reference>
+                    <FlowStep x:Name="__ReferenceID35">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">240,1507</av:Point>
+                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">340,1573 340,1689</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Select BIFA" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'SelectanI Transpare'" sap2010:WorkflowViewState.IdRef="WindowScope_21" InformativeScreenshot="10f6085b54c7f57b32903a711dc7fb37" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Select an Integrated Sales System - \\Remote' /&gt;">
+                          <ui:WindowScope.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Select'" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition OffsetX="90" OffsetY="60" Position="TopLeft" />
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="05adba0d5290fe55a2ee70bd8cb9ebdb">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe Select'" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition OffsetX="180" OffsetY="192" Position="TopLeft" />
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="2874306f84fa555234c923cc124dcf2d">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:WindowScope.Body>
+                        </ui:WindowScope>
+                      </Sequence>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID7</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
@@ -1234,9 +1036,9 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID11</x:Reference>
-    <x:Reference>__ReferenceID12</x:Reference>
-    <FlowDecision x:Name="__ReferenceID17" Condition="[CreateNewRecord]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <FlowDecision x:Name="__ReferenceID14" Condition="[CreateNewRecord]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1247,7 +1049,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
-        <FlowStep x:Name="__ReferenceID15">
+        <FlowStep x:Name="__ReferenceID12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">240,704.5</av:Point>
@@ -1261,7 +1063,7 @@
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID14">
+            <FlowStep x:Name="__ReferenceID11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">240,804.5</av:Point>
@@ -1275,7 +1077,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID16">
+                <FlowStep x:Name="__ReferenceID13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">240,914.5</av:Point>
@@ -1289,7 +1091,7 @@
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID13</x:Reference>
+                    <x:Reference>__ReferenceID10</x:Reference>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
@@ -1298,7 +1100,7 @@
         </FlowStep>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowStep x:Name="__ReferenceID27">
+        <FlowStep x:Name="__ReferenceID23">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">520,707</av:Point>
@@ -1342,15 +1144,15 @@
             </ui:WindowScope>
           </Sequence>
           <FlowStep.Next>
-            <x:Reference>__ReferenceID14</x:Reference>
+            <x:Reference>__ReferenceID11</x:Reference>
           </FlowStep.Next>
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
-    <x:Reference>__ReferenceID15</x:Reference>
-    <x:Reference>__ReferenceID14</x:Reference>
-    <x:Reference>__ReferenceID16</x:Reference>
-    <FlowStep x:Name="__ReferenceID40">
+    <x:Reference>__ReferenceID12</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
+    <x:Reference>__ReferenceID13</x:Reference>
+    <FlowStep x:Name="__ReferenceID36">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,134</av:Point>
@@ -1364,7 +1166,7 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID18">
+        <FlowStep x:Name="__ReferenceID15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,244.5</av:Point>
@@ -1385,7 +1187,7 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID19">
+            <FlowStep x:Name="__ReferenceID16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,345.5</av:Point>
@@ -1414,7 +1216,7 @@
                 <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="330.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_8" />
               </Sequence>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID20">
+                <FlowStep x:Name="__ReferenceID17">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,464.5</av:Point>
@@ -1436,7 +1238,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ImageFound>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID17</x:Reference>
+                    <x:Reference>__ReferenceID14</x:Reference>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
@@ -1445,12 +1247,33 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID15</x:Reference>
+    <x:Reference>__ReferenceID16</x:Reference>
+    <x:Reference>__ReferenceID17</x:Reference>
     <x:Reference>__ReferenceID18</x:Reference>
     <x:Reference>__ReferenceID19</x:Reference>
     <x:Reference>__ReferenceID20</x:Reference>
     <x:Reference>__ReferenceID21</x:Reference>
     <x:Reference>__ReferenceID22</x:Reference>
     <x:Reference>__ReferenceID23</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">160,3993.66666666667</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Interfacing workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="WorkFlows\Folder Creation\Interfacing.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="BookingReference">[PNR]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+    </FlowStep>
     <x:Reference>__ReferenceID24</x:Reference>
     <x:Reference>__ReferenceID25</x:Reference>
     <x:Reference>__ReferenceID26</x:Reference>
@@ -1463,9 +1286,46 @@
     <x:Reference>__ReferenceID33</x:Reference>
     <x:Reference>__ReferenceID34</x:Reference>
     <x:Reference>__ReferenceID35</x:Reference>
-    <x:Reference>__ReferenceID36</x:Reference>
-    <x:Reference>__ReferenceID37</x:Reference>
-    <x:Reference>__ReferenceID38</x:Reference>
-    <x:Reference>__ReferenceID39</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">400,3477</av:Point>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Click on Close" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_53">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'LON HYDMo Transpare'" sap2010:WorkflowViewState.IdRef="WindowScope_22" InformativeScreenshot="ccd70a41bbde3d369aa61fbbe731d9a9" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='LON-HYD Mon 24 Aug / HYD-LON Mon 31 Aug 1 ADT - \\Remote' /&gt;">
+          <ui:WindowScope.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'wfica32.exe LON-HYD'" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="710" OffsetY="549" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="1db4112429895db24d58bc92ea3b152b">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+              </Sequence>
+            </ActivityAction>
+          </ui:WindowScope.Body>
+        </ui:WindowScope>
+      </Sequence>
+    </FlowStep>
   </Flowchart>
 </Activity>
