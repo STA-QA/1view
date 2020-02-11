@@ -354,7 +354,7 @@
                     <ui:CursorPosition OffsetX="0" OffsetY="0" Position="Center" />
                   </ui:ClickImage.CursorPosition>
                   <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAWCAYAAAB+F+RbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE/SURBVFhH7ZhfDoIwDMZ3IYxXIWEH8YFwDF9IuIRvJpzBRx+8T21Zh135o4AmwiD5RUf7bXxrJ4kGIrrM436DWNjNbpXd7FbpmK0yA8YghxPU9zNYk0Bx9XEap1ApzVroqaw0qM2umxGz9MlVRo75RcREXp6qHDkP67OzuJeAzRLunAsUB72GzkvBYo4ted4S12u0PJ7AxMrqmDBCDyFanI6De0AyFGrCTfFQzOvDvDpH07wOfe/Xv2eh2bHYq2KEM641SLNJPm9g7usJjm0nKP0EfmhWxvpykKAlx/RssvSm/f1p/MisO4vddlMaMhscg6G5XfvaLJ3dwkTHbPjqeY3dIp+aRaj12vaUZ1FrOAeNDM+NBJsxj57K/ifNj9SCFiZWYNa/npZVlVhNZb/BbnarxGWW/56J4oqosjd4As/fmE6CYPTBAAAAAElFTkSuQmCC" />
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAOCAYAAAC1i+ttAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVFhH7ZbBDYMwDEWzEBWrIJFBekCMwQWJJbhV6gwcOXQf1yYJOC6gSkBAwOGpDfZ3xMcxqE/bwM363MZuxG3sRiw2tkoVKIU8nvBuC9Aqgvzl4rROoBKaK7BCx3IzpbHXZUVj6dd2LxJnNYuxvCwRObyO1acFuxaBTiN7ImrIH3IPmZeAxhxd2rol7tdp7ToQG3esjDHT6IbZmKCRYswg83yN/wAcFHN6P++docF2H/o/rt+WwMbOxYZOJIzJUoN0D8TlTdR+PSHuO1zoA3EgY3lsLAfxjvWc3hpaOoPd9XAcxFgzO3+PrNCQsd4omaptRoBOk13GALHYWP9za1ibG/rXWISOb3/E+eyUGpuDpk3XRjzjw7NCxx6T7gW20xggTmis+yTbr1uJ03bsvjTwBYdUFB+WY5icAAAAAElFTkSuQmCC" />
                   </ui:ClickImage.Image>
                   <ui:ClickImage.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">

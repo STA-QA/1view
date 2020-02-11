@@ -56,7 +56,7 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="_1_31_1SOURCE_System_Integration___Make_New_Booking_and_Interface___Copy" sap:VirtualizedContainerService.HintSize="1038,5704" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Default="Green" Name="Cus_LastName" />
+      <Variable x:TypeArguments="x:String" Default="Adams" Name="Cus_LastName" />
       <Variable x:TypeArguments="x:String" Default="flowtest" Name="Cus_FirstName" />
       <Variable x:TypeArguments="x:String" Default="1" Name="NoOfPassenger" />
       <Variable x:TypeArguments="x:Boolean" Name="CreateNewRecord" />
