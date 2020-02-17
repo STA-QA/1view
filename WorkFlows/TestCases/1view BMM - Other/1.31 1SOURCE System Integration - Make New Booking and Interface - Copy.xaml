@@ -56,8 +56,8 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="_1_31_1SOURCE_System_Integration___Make_New_Booking_and_Interface___Copy" sap:VirtualizedContainerService.HintSize="1038,5704" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Default="Adams" Name="Cus_LastName" />
-      <Variable x:TypeArguments="x:String" Default="flowtest" Name="Cus_FirstName" />
+      <Variable x:TypeArguments="x:String" Default="flow" Name="Cus_LastName" />
+      <Variable x:TypeArguments="x:String" Default="Smoketest" Name="Cus_FirstName" />
       <Variable x:TypeArguments="x:String" Default="1" Name="NoOfPassenger" />
       <Variable x:TypeArguments="x:Boolean" Name="CreateNewRecord" />
       <Variable x:TypeArguments="x:String" Name="FolderNumber" />
@@ -180,7 +180,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,664" sap2010:WorkflowViewState.IdRef="WindowScope_16" InformativeScreenshot="cf1eab27cb711b410565bd5630c94b30" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Dolphin&amp;apos;s Booking Management Module - STA Travel UK ( GBP ) - \\*' /&gt;">
+                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,664" sap2010:WorkflowViewState.IdRef="WindowScope_16" InformativeScreenshot="cf1eab27cb711b410565bd5630c94b30" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - STA Travel UK ( GBP ) - \\*' /&gt;">
                               <ui:WindowScope.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
@@ -245,7 +245,7 @@
                                 </ActivityAction>
                               </ui:WindowScope.Body>
                             </ui:WindowScope>
-                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_18" InformativeScreenshot="cf1eab27cb711b410565bd5630c94b30" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Dolphin&amp;apos;s Booking Management Module - STA Travel UK ( GBP ) - \\*' /&gt;">
+                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_18" InformativeScreenshot="cf1eab27cb711b410565bd5630c94b30" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - STA Travel UK ( GBP ) - \\*' /&gt;">
                               <ui:WindowScope.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
@@ -379,7 +379,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">820,1473 820,1490 630,1490 630,1460 600,1460</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                          <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="476,498" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="ui:GenericValue" Name="WficaExeDolphins" />
                                             </Sequence.Variables>
@@ -388,7 +388,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,406" sap2010:WorkflowViewState.IdRef="WindowScope_11" InformativeScreenshot="46b06ac41e2b4cd51e31909f3c94534f" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Dolphin&amp;apos;s Booking Management Module - STA Travel UK ( GBP ) - \\*' /&gt;">
+                                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'DolphinsB Transpare'" sap:VirtualizedContainerService.HintSize="434,406" sap2010:WorkflowViewState.IdRef="WindowScope_11" InformativeScreenshot="46b06ac41e2b4cd51e31909f3c94534f" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - STA Travel UK ( GBP ) - \\*' /&gt;">
                                               <ui:WindowScope.Body>
                                                 <ActivityAction x:TypeArguments="x:Object">
                                                   <ActivityAction.Argument>
