@@ -331,7 +331,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,193 300,247</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Image" sap:VirtualizedContainerService.HintSize="476,728" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <Sequence DisplayName="Click Itinerary -&gt; cruise -&gt; booking conf" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

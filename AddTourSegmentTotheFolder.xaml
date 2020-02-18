@@ -574,7 +574,7 @@
                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">200,785.333333333333</av:Point>
                           <av:Size x:Key="ShapeSize">200,66</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300,851.333333333333 300,885.333333333333</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">300,851.333333333333 300,881.333333333333 290,881.333333333333 290,917</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Sequence DisplayName="Enter Tour Sell units and Commission" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_110">
@@ -739,7 +739,7 @@
                         <FlowStep x:Name="__ReferenceID5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,885.333333333333</av:Point>
+                              <av:Point x:Key="ShapeLocation">190,917</av:Point>
                               <av:Size x:Key="ShapeSize">200,66</av:Size>
                             </scg1:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -808,7 +808,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,213 300,295.333333333333</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Click Tour --&gt; Add" sap:VirtualizedContainerService.HintSize="476,582" sap2010:WorkflowViewState.IdRef="Sequence_114">
+      <Sequence DisplayName="Click Tour --&gt; Add" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_114">
         <sap:WorkflowViewStateService.ViewState>
           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

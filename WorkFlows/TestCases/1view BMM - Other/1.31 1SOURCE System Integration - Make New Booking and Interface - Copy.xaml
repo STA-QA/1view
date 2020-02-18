@@ -66,6 +66,8 @@
       <Variable x:TypeArguments="x:String" Name="variable1" />
       <Variable x:TypeArguments="x:String" Name="ocrtecxt" />
       <Variable x:TypeArguments="ui:Image" Name="Screenshot" />
+      <Variable x:TypeArguments="x:String" Default="2" Name="NoOfNights" />
+      <Variable x:TypeArguments="x:Int32" Default="200" Name="NoOfDaysFromToday" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -286,7 +288,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">868,1236.5 868,1330 370,1330</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Select Date Of Travel" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                              <Sequence DisplayName="Select Date Of Travel" sap:VirtualizedContainerService.HintSize="376,664" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -328,7 +330,7 @@
                                     </ui:Target>
                                   </ui:Click.Target>
                                 </ui:Click>
-                                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Dolphin's'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="20OCT20">
+                                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'wfica32.exe Dolphin's'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="[system.date.now.AddDays(NoOfDaysFromToday).ToString(&quot;ddMMMyy&quot;)]">
                                   <ui:TypeInto.Target>
                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3baf65d37ad3f63eeed2b6904ce27634" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' omit:title='Dolphin&amp;apos;s Booking Management Module - Covent Garden ( GBP ) - \\*' /&gt;" WaitForReady="INTERACTIVE">
                                       <ui:Target.TimeoutMS>
@@ -379,7 +381,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">820,1473 820,1490 630,1490 630,1460 600,1460</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="476,498" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                          <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="ui:GenericValue" Name="WficaExeDolphins" />
                                             </Sequence.Variables>
@@ -780,7 +782,7 @@
                                                                                   <av:PointCollection x:Key="ConnectorLocation">500,2215.5 500,2265.5</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Enter From Date" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="20OCT20">
+                                                                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Enter From Date" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="[system.date.now.AddDays(NoOfDaysFromToday).ToString(&quot;ddMMMyy&quot;)]">
                                                                                 <ui:TypeInto.Target>
                                                                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b43f2033b5e00354bcd915151195b7c8" Selector="&lt;html app='firefox.exe' htmlwindowname='main' title='Search - Hotel' /&gt;&lt;webctrl aaname='From' id='m_c_C000_m_m_m_c_c3_c3_uscSrchParms_ctDatesSelector_dateAndDurat*' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
                                                                                     <ui:Target.TimeoutMS>
@@ -803,7 +805,7 @@
                                                                                       <av:PointCollection x:Key="ConnectorLocation">500,2316.5 500,2366.5</av:PointCollection>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select No Of Nights" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="2">
+                                                                                  <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select No Of Nights" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[NoOfNights]">
                                                                                     <ui:SelectItem.Items>
                                                                                       <scg:List x:TypeArguments="x:String" Capacity="50">
                                                                                         <x:String>1</x:String>
@@ -945,11 +947,11 @@
                                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                   <av:Point x:Key="ShapeLocation">400,2565.5</av:Point>
-                                                                                                  <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                                  <av:PointCollection x:Key="ConnectorLocation">500,2618.16666666667 500,2666.5</av:PointCollection>
+                                                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                  <av:PointCollection x:Key="ConnectorLocation">500,2616.5 500,2666.5</av:PointCollection>
                                                                                                 </scg:Dictionary>
                                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Select STAy Data Source" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Select STAy Data Source" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                                                                                 <ui:ClickImage.CursorPosition>
                                                                                                   <ui:CursorPosition Position="Center">
                                                                                                     <ui:CursorPosition.OffsetX>
@@ -981,11 +983,11 @@
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                       <av:Point x:Key="ShapeLocation">400,2666.5</av:Point>
-                                                                                                      <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                                      <av:PointCollection x:Key="ConnectorLocation">500,2719.16666666667 500,2744.5</av:PointCollection>
+                                                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                      <av:PointCollection x:Key="ConnectorLocation">500,2717.5 500,2744.5</av:PointCollection>
                                                                                                     </scg:Dictionary>
                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'firefox.exe Search'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'firefox.exe Search'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                                                                                     <ui:ClickImage.CursorPosition>
                                                                                                       <ui:CursorPosition Position="Center">
                                                                                                         <ui:CursorPosition.OffsetX>
@@ -1017,11 +1019,11 @@
                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                           <av:Point x:Key="ShapeLocation">400,2744.5</av:Point>
-                                                                                                          <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                                          <av:PointCollection x:Key="ConnectorLocation">500,2797.16666666667 500,2844.5</av:PointCollection>
+                                                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                          <av:PointCollection x:Key="ConnectorLocation">500,2795.5 500,2844.5</av:PointCollection>
                                                                                                         </scg:Dictionary>
                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="CLick &quot;Page Down&quot;" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                                                                                                      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="CLick &quot;Page Down&quot;" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                                                                                                         <ui:SendHotkey.Target>
                                                                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="INTERACTIVE">
                                                                                                             <ui:Target.TimeoutMS>
@@ -1040,11 +1042,11 @@
                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                               <av:Point x:Key="ShapeLocation">400,2844.5</av:Point>
-                                                                                                              <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                                              <av:PointCollection x:Key="ConnectorLocation">500,2897.16666666667 500,2945.5</av:PointCollection>
+                                                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                              <av:PointCollection x:Key="ConnectorLocation">500,2895.5 500,2945.5</av:PointCollection>
                                                                                                             </scg:Dictionary>
                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'firefox.exe Search'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                                                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'firefox.exe Search'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                                                                                             <ui:ClickImage.CursorPosition>
                                                                                                               <ui:CursorPosition Position="Center">
                                                                                                                 <ui:CursorPosition.OffsetX>
@@ -1092,11 +1094,11 @@
                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                       <av:Point x:Key="ShapeLocation">400,3014.5</av:Point>
-                                                                                                                      <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">500,3067.16666666667 500,3115.5</av:PointCollection>
+                                                                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">500,3065.5 500,3115.5</av:PointCollection>
                                                                                                                     </scg:Dictionary>
                                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                                  <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="CLick &quot;Page Down&quot;" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="pgdn" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                                                                                                                  <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="CLick &quot;Page Down&quot;" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="pgdn" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                                                                                                                     <ui:SendHotkey.Target>
                                                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="INTERACTIVE">
                                                                                                                         <ui:Target.TimeoutMS>
@@ -1115,11 +1117,11 @@
                                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                           <av:Point x:Key="ShapeLocation">400,3115.5</av:Point>
-                                                                                                                          <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">500,3168.16666666667 500,3216.5</av:PointCollection>
+                                                                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">500,3166.5 500,3216.5</av:PointCollection>
                                                                                                                         </scg:Dictionary>
                                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Add To Cart" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                                                                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Add To Cart" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                                                                                                         <ui:ClickImage.CursorPosition>
                                                                                                                           <ui:CursorPosition Position="Center">
                                                                                                                             <ui:CursorPosition.OffsetX>
@@ -1167,11 +1169,11 @@
                                                                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                   <av:Point x:Key="ShapeLocation">400,3288.5</av:Point>
-                                                                                                                                  <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                                                                  <av:PointCollection x:Key="ConnectorLocation">500,3341.16666666667 500,3379</av:PointCollection>
+                                                                                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                                  <av:PointCollection x:Key="ConnectorLocation">500,3339.5 500,3379</av:PointCollection>
                                                                                                                                 </scg:Dictionary>
                                                                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                                                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click On Book RB" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                                                                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click On Book RB" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                                                                                                                 <ui:ClickImage.CursorPosition>
                                                                                                                                   <ui:CursorPosition Position="Center">
                                                                                                                                     <ui:CursorPosition.OffsetX>
